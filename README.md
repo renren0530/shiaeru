@@ -1,3 +1,7 @@
+#アプリケーション名
+
+![ロゴマーク](https://user-images.githubusercontent.com/86912464/143829207-ee7eedb4-fa7e-48cf-a891-0a520db829e7.png)
+
 # テーブル設計
 
 ## users テーブル
