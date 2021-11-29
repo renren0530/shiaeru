@@ -1,0 +1,14 @@
+
+<%= link_to(item_return_id_path(@item.id, @return.id), class: 'returns-btn') do  %>
+<p class="returns-name"><%= @return.return_name %></p>
+<%= image_tag @return.images[0], class: "returns-image" %> 
+<p class="item-price">¥<%= number_to_currency(@return.return_price.to_s, locale:"jp") %></p>
+<p class="donate">(自然保護団体への寄付額：<%= number_to_currency(@return.return_donate.to_s, locale:"jp") %>)</p>
+<p class="returns-text">支援する</p>
+<object>
+  <% if user_signed_in? && (current_user.id == 1) %>
+  <%= link_to "編集", edit_item_return_path(@item.id,@return.id), method: :get %>
+  <%= link_to "削除", item_return_path(@item.id,@return.id), method: :delete %>
+  <% end %> 
+</object>  
+<% end %>

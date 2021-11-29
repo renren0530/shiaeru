@@ -1,0 +1,22 @@
+<%= render "shared/header" %>
+
+<h3><%= "#{@brand.brand_name}の商品一覧" %></h3>
+<div class="brand-return">
+<% @returns.each do |returns| %>
+<% if returns.brand_kinds_id == @brand.id  %>
+<%= link_to item_path(returns.item_id), class: 'returns-btn' do  %>
+<p class="returns-name"><%= returns.return_name %></p>
+<%= image_tag returns.images[0], class: "returns-image" %> 
+<p class="item-price">価格：<%= returns.return_price %>円</p>
+<p class="donate">自然保護団体への寄付額：<%= returns.return_donate %>円</p>
+<p class="returns-text">このリターンのあるプロジェクトへ</p>
+<% end %>
+<% end %>
+<% end %>
+</div>
+  <p class="text", style="white-space:pre-wrap;"><%= @brand.brand_info %></p>
+
+<%= render "shared/footer" %>
+
+
+

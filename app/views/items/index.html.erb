@@ -1,0 +1,68 @@
+<%= render "shared/header" %>
+<div class='title-contents'>
+ <h1 class="service-title1">しあえるプロジェクト</h1>
+  <h1 class='service-title2'>地球がすべての生命にとって、良い世界になることを目指して</h1>
+   <h1 class='service-title3'>応援・ご支援・よろしくお願いいたします</h1>
+</div>
+
+<%
+=begin
+%>
+<div class="shiaeru-explanation">
+<h3 class="shiaeru-project">しあえるの活動</h3>
+</div>
+
+
+<div class="shiaeru-content">
+   <div class="activities">
+   <%= image_tag "items/yoko_color.png", size: '150x60', class:"shiaeru-icon" %>
+   </div>
+
+   <div class="activities">
+    <p class="sub-title">1、絶滅危惧種を守る活動</p>
+    <p class="sub-title">2、自然保護団体への寄付活動</p>
+    <p class="sub-title">3、廃棄処分・滞留在庫商品の再利用活動</p>
+   </div>
+
+   <div class="activities">
+    <%= link_to(root_path, class: 'shiaeru-btn') do  %>
+    <span class="shiaeru-text">詳しくはこちら</span>
+    <% end %>
+   </div>
+</div>
+<%
+=end
+%>
+
+<div class="project-title">
+<h3 class="project-list">プロジェクト一覧</h3>
+</div>
+
+<div class="main">
+ <%= render partial: "item", collection: @items %>
+</div>
+
+<div class="project-title">
+<h3 class="project-list">ブランド一覧</h3>
+</div>
+
+<div class="main">
+ <%= render partial: "brands/brand", collection: @brands %>
+</div>
+
+<% if user_signed_in? && (current_user.id == 1) %>
+<%= link_to(new_item_path, class: 'purchase-btn') do  %>
+  <span class='purchase-btn-text'>プロジェクト登録</span>
+  <%= image_tag 'items/icon_camera.png' , size: '100x100' ,class: "purchase-btn-icon" %>
+<% end %> 
+<% end %>
+
+<% if user_signed_in? && (current_user.id == 1) %>
+<%= link_to(new_brand_path, class: 'purchase-btn') do  %>
+  <span class='purchase-btn-text'>ブランド登録</span>
+  <%= image_tag 'items/icon_camera.png' , size: '100x100' ,class: "purchase-btn-icon" %>
+<% end %> 
+<% end %>
+
+<%= render "shared/footer" %>
+

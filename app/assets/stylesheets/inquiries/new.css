@@ -1,0 +1,26 @@
+.inquiry{
+  text-align: center;
+
+}
+
+.new_inquiry{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px;
+
+
+}
+
+.form-group{
+margin-left: 250px;
+padding: 0;
+}
+
+p.contents{
+  margin:0
+}
+
+p.content{
+  margin:0 0 20px 0;
+}

@@ -1,0 +1,40 @@
+<h2>新規登録</h2>
+
+<%= form_with model: @user, url: user_registration_path, local: true do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+   <div class="field">
+    <%= f.label :nickname %><br />
+    <%= f.text_field :nickname, autofocus: true, placeholder:"例) れん"%>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, placeholder:"PC・携帯どちらでも可" %>
+  </div>
+
+  <%if @sns_id.present? %>
+   <%= hidden_field_tag :sns_auth, true %>
+ <% else %>
+  <div class="field">
+    <%= f.label :password %><br />
+    <%= f.password_field :password, placeholder:"6文字以上の半角英数字" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, placeholder:"6文字以上の半角英数字" %>
+  </div>
+   <% end %>
+
+   <div class="actions">
+    <%= f.submit "新規登録" %>
+  </div>
+
+<% end %>
+
+<%= link_to "Facebookで登録", user_facebook_omniauth_authorize_path, method: :post%>
+<%= link_to "Googleで登録", user_google_oauth2_omniauth_authorize_path, method: :post%>
+<%= link_to 'トップページへ戻る', "/" %>
+
+

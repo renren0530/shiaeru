@@ -1,0 +1,17 @@
+.items-sell-contents{
+display: flex;
+align-items: center;
+flex-direction: column;
+}
+
+.items-sell-main{
+display: flex;
+align-items: center;
+flex-direction: column;
+}
+
+.img-upload{
+display: flex;
+justify-content:space-between;
+}
+

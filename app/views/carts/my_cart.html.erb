@@ -1,0 +1,67 @@
+<%= render "shared/header" %>
+<h1 class="shopping-cart">ショッピングカート</h1>
+<% if @cart.blank? %>
+  <h1 class="text-center">カートに商品はありません</h1>
+<% else %>
+<div class="carts">
+<div class="cart-title">
+<span class="cart-product">商品名</span>
+<div>
+<span class="cart-details">個数</span>
+<span class="cart-details">寄付額</span>
+<span class="cart-details">価格</span>
+</div>
+
+</div>
+
+
+<div class="cart">
+<% sum = 0 %>
+<% @cart.cart_returns.each do |cart_return| %>
+
+<div class="cart-main">
+<div class="cart-btn">
+<%= link_to(item_return_id_path(cart_return.return.item_id, cart_return.return_id), class: 'back-btn') do  %> 
+<%= image_tag cart_return.return.images[0], size:"150", class:"cart-image" %>   
+<p class="cart-name"><%= cart_return.return.return_name %></p>
+<% end %>
+
+
+<div class="cart-donate-price">
+    <%= form_with url: update_item_path, class:"cart-quantity", method: :post, local: true do |f| %>
+          <%= hidden_field_tag :cart_return_id, cart_return.id %> 
+          <span><%= f.number_field :quantity, value: cart_return.quantity, class:"quantity"  %></span>
+          <span><%= f.submit "更新", class:"change"%></span>
+    <% end %>
+<span class="cart-detail"><%= cart_return.return.return_donate.to_i*cart_return.quantity.to_i %>円</span>
+<span class="cart-detail"><%= cart_return.return.return_price.to_i*cart_return.quantity.to_i %>円</span>
+</div>
+
+</div>
+
+    <%= form_with url: delete_item_path, method: :delete, local: true do |f| %>
+      <%= hidden_field_tag :return_id, cart_return.return_id %>
+      <%= f.submit "削除する", class: "cart-destroy" %>
+    <% end %>
+
+  
+
+<% price = cart_return.return.return_price.to_i %>
+<% quantity = cart_return.quantity.to_i %>
+<% sum = price*quantity + sum %>
+
+</div>
+<% end %>
+</div>
+<div class="cart-buy">
+<p class="cart-price"><%= "合計：#{sum}円" %></p>
+ <%= link_to orders_path, class: 'return-btn' do  %> 
+    <p class="return-buy-move">購入画面へ進む</p>
+ <% end %> 
+</div>
+
+<% end %>
+
+</div>
+<%= render "shared/footer" %>
+

@@ -1,0 +1,170 @@
+.transaction-contents {
+  width: 100vw;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+}
+
+.transaction-main {
+  background-color: #FFF;
+  width: 70vw;
+  padding: 10vh 10vw;
+  margin: 10vh 10vw;
+}
+
+.transaction-title-text {
+  text-align: center;
+  border-bottom: 2px solid #f5f5f5;
+  font-weight: bold;
+  font-size: 22px;
+  padding-bottom:20px;
+
+}
+
+/* 購入内容の表示 */
+.buy-item-info {
+  height: 150px;
+  border-bottom: 2px solid #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buy-item-img {
+  margin-right: 20px;
+  height: 130px;
+  width: 250px;
+}
+
+.buy-item-right-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.buy-item-text {
+  font-size: 20px;
+}
+
+.buy-item-price {
+  display: flex;
+  font-weight: bold;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.item-price-text {
+  font-size: 15px;
+  margin-right: 20px;
+}
+
+
+
+/* /購入内容の表示 */
+
+/* 支払額の表示 */
+.item-payment {
+  height: 120px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 2px solid #f5f5f5;
+  font-weight: bold;
+}
+
+.item-payment-title {
+  font-size: 20px;
+}
+
+.item-payment-price {
+  font-size: 25px;
+}
+
+/* /支払額の表示 */
+
+/* カード情報の入力 */
+.credit-card-form {
+  border-bottom: 2px solid #f5f5f5;
+  margin-top: 15px;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info-input-haedline {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.input-default{
+  width:15vw;
+  height:4vh;
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+.available-card {
+  display: flex;
+  height: 35px;
+}
+
+.card-logo {
+  margin: 5px 5px;
+}
+
+.form-group{
+  width:30vw;
+}
+
+.form-text-wrap{
+margin-top:13px;
+}
+
+.input-expiration-date-wrap {
+  display: flex;
+}
+
+.input-expiration-date {
+  resize: none;
+  width:5vw;
+  height:4vh;
+  font-size: 12px;
+  margin-top: 3px;
+  resize: none;
+  line-height: 30px;
+  
+}
+
+/* /カード情報の入力 */
+
+/* 配送先の入力 */
+.shipping-address-form {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-any {
+  background: #ccc;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  padding: 2px 4px;
+}
+
+.buy-btn {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.buy-red-btn {
+  width: 100%;
+  background: #ea352d;
+  border: 1px solid #ea352d;
+  color: #fff;
+  line-height: 48px;
+  font-size: 14px;
+  cursor: pointer;
+}

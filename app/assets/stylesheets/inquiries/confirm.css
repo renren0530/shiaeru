@@ -1,0 +1,16 @@
+table.form-table{
+  margin:20px 20px 0;
+}
+
+.check-form{
+display:flex;
+
+}
+
+td.text-center{
+  width:200px;
+}
+
+tbody.form-tbody{
+width:100%;
+}

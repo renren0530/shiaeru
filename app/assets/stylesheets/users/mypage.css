@@ -1,0 +1,55 @@
+
+.historys{
+  font-family: serif;
+  margin:50px 0;
+  text-align: center;
+}
+
+.history{
+  margin:0 120px 30px;
+}
+
+.purchase{
+}
+
+.buy{
+  padding:30px 10px;
+  display:flex;
+  border-top: solid 5px gray;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+  border-radius: 10px;
+  margin-bottom:20px;
+ 
+}
+
+.history-detail{
+  margin-left:10px;
+ 
+}
+
+.buy_image{
+}
+
+p.buy_details{
+  margin:0 0 10px 0;
+  font-weight: bold;
+  font-family: serif;
+
+}
+
+p.buy_detail{
+  margin:0 20px 0 0;
+  font-weight: bold;
+  font-family: serif;
+
+}
+
+.buy-history{
+  display:flex;
+}
+
+.history-price{
+  font-family: serif;
+  text-align: end;
+  font-size: 18px;
+}

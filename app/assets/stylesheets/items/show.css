@@ -1,0 +1,115 @@
+.project-show{
+  margin:50px 150px 20px;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: serif;
+}
+
+.project-image{
+margin:20px 150px 20px;
+}
+
+.project-img{
+  width: 45vw;
+}
+
+.project-content{
+  display:flex;
+  margin:20px 150px 20px;
+}
+
+.project-detail{
+  width:50vw;
+}
+
+.project-text{
+  border-left: 6px solid #ccc;
+  padding: 10px;
+  color: #000;
+  font-weight: bold;
+  font-size: 25px;
+  font-family: serif;
+}
+
+p.text{
+  margin:20px 40px 20px 0;
+  font-size: 15px;
+  font-family: serif;
+
+}
+
+.project-return{
+  width:30vw;
+  display:flex;
+  flex-direction: column;
+}
+
+.project-text-price{
+  font-weight: bold;
+  font-size: 25px;
+  font-family: serif;
+  border-left: 6px solid #ccc;
+  padding: 10px;
+}
+
+.return-detail{
+}
+
+/* _@return */
+
+.returns-btn{
+  text-decoration: none;
+  color: #444444;
+  border-top: solid 5px gray;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+  border-radius: 10px;
+  margin:15px 15px 15px 0;
+  padding:20px;
+  width:300px;
+  height:350px;
+}
+
+p.returns-name{
+  font-family: serif;
+  font-size: 20px;
+  font-weight: bold;
+  margin:0 0 10px 0;
+}
+
+.returns-image{
+  width:100%;
+  height:55%;
+}
+
+p.item-price{
+  font-size: 18px;
+  font-family: serif;
+  color:#444444;
+  margin:10px 0 ;
+  font-weight: bold;
+
+}
+
+p.donate{
+  font-size: 15px;
+  font-weight: bold;
+
+  font-family: serif;
+  color:#444444;
+  margin:10px 0 ;
+}
+
+.returns-text{
+  font-weight: bold;
+  font-family: serif;
+  padding: 5px;
+  font-size: 12px;
+  background-color: #f7f7f7;
+  border:1px solid black;
+  text-align: center;
+  border-radius: 5px;
+
+  }
+
+
+/* _@return */

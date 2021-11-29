@@ -1,0 +1,34 @@
+<%= devise_error_messages! %>
+<div class="title_background">
+  <div class="page-header">
+    <h2>パスワード再設定</h2>
+  </div>
+  <p>パスワードを再設定します。<br>
+     新しいパスワードを入力してください。
+  </p>
+</div>
+<div class="registrations_background">
+  <div class="registrations">
+    <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+      <%= f.hidden_field :reset_password_token %>
+
+      <div class="email">
+        <%= f.label :password, "新しいパスワード" %><br />
+        <% if @minimum_password_length %>
+          <em>(<%= @minimum_password_length %> 文字以上)</em><br />
+        <% end %>
+        <p class="in_field"><%= f.password_field :password, autofocus: true, autocomplete: "new-password" %></p>
+      </div>
+
+      <div class="password_confirmation">
+        <%= f.label :password_confirmation, "新しいパスワード再入力" %><br />
+        <p class="in_field"><%= f.password_field :password_confirmation, autocomplete: "off" %></p>
+      </div>
+
+      <div class="actions">
+        <p class="in_field"><%= f.submit "パスワード再設定",:class=>"form_login_btn col-xs-12" %></p>
+      </div>
+    <% end %>
+  </div>
+</div>
+<%= link_to 'トップページへ戻る', "/" %>
