@@ -4,6 +4,11 @@
   text-align: center;
 }
 
+.text-center{
+  font-family: serif;
+  text-align: center;
+  margin:100px 0;
+}
 .carts{
   margin:0 180px;
 }
