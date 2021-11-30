@@ -195,10 +195,10 @@
 | brand_name                   | string     | null: false |
 | brand_info                   | text       | null: false |
 
-#　開発環境
-フロントエンド：HTML5/CSS/JavaScript/Ajax
-バックエンド：Ruby on Rails(6.0.0)/Ruby(2.6.5)/JavaScript
-Linter：Rubocop
-データベース：MySQL(5.6.50)/Sequel Pro
-インフラ：Heroku
+# 開発環境
+フロントエンド：HTML5/CSS/JavaScript/Ajax<br>
+バックエンド：Ruby on Rails(6.0.0)/Ruby(2.6.5)/JavaScript<br>
+Linter：Rubocop<br>
+データベース：MySQL(5.6.50)/Sequel Pro<br>
+インフラ：Heroku<br>
 タスク管理：Trello
