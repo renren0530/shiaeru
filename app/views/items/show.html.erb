@@ -25,7 +25,6 @@
 <% if user_signed_in? && (current_user.id == 1) %>
 <%= link_to(new_item_return_path(@item.id), class: 'purchase-btn') do  %>
   <span class='purchase-btn-text'>リターン登録</span>
-  <%= image_tag 'items/icon_camera.png' , size: '100x100' ,class: "purchase-btn-icon" %>
 <% end %>
 <% end %>
 

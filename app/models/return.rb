@@ -3,6 +3,7 @@ class Return < ApplicationRecord
   has_many_attached :images
   has_many :order_returns
   has_many :buys
+  has_many :cart_returns
 
 
 

@@ -4,8 +4,8 @@
   <%= image_tag item.image, class: "item-img" %> 
   <p class="item-info"><%= item.item_name %></p>
       <% if user_signed_in? && (current_user.id == 1) %>
-       <%= link_to "編集", edit_item_path(item.id), method: :get, class: "item-red-btn" %>
-       <%= link_to "削除", item_path(item.id), method: :delete, class:"item-destroy" %>
+       <%= link_to "編集", edit_item_path(item.id), method: :get, class: "orner-edit-btn" %>
+       <%= link_to "削除", item_path(item.id), method: :delete, class:"orner-edit-btn" %>
       <% end %>
   <% end %>  
 </li>

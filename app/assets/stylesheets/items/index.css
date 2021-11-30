@@ -170,7 +170,11 @@ position: relative;
 
 p.item-info{
   padding:0;
+}
 
+.orner-edit-btn{
+  color:gray;
+  text-decoration:none;
 }
 
 /* _item */
@@ -187,10 +191,12 @@ p.item-info{
   padding: 10px;
   background-color:cadetblue;
   margin: 15px; */
-  text-decoration: none;
+
 }
 
-.purchase-btn-text{
-  color:black;
-  font-weight: bold;
+span.purchase-btn-texts{
+  color:gray;
+  font-weight:bold;
+  margin-left:90px;
+
 }

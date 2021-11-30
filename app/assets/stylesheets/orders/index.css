@@ -18,7 +18,6 @@
   font-weight: bold;
   font-size: 22px;
   padding-bottom:20px;
-
 }
 
 /* 購入内容の表示 */
@@ -32,7 +31,7 @@
 
 .buy-item-img {
   margin-right: 20px;
-  height: 130px;
+  height: 200px;
   width: 250px;
 }
 
@@ -43,18 +42,32 @@
 
 .buy-item-text {
   font-size: 20px;
+  font-family: serif;
+
 }
 
 .buy-item-price {
   display: flex;
   font-weight: bold;
   align-items: center;
+  font-family: serif;
+  font-size: 15px;
   margin-top: 10px;
 }
 
-.item-price-text {
-  font-size: 15px;
-  margin-right: 20px;
+p.item-price-quantity {
+  font-size: 20px;
+  font-family: serif;
+  margin-left: 20px;
+  font-weight: bold;
+  margin:0 0 15px 20px;
+}
+p.item-price-text {
+  font-size: 20px;
+  font-family: serif;
+  margin-left: 20px;
+  font-weight: bold;
+  margin:0 0 30px 20px;
 }
 
 

@@ -13,15 +13,9 @@
     <%# 購入内容の表示 %>
       <%= image_tag cart_return.return.images[0], class: 'buy-item-img' %>
       <div class='buy-item-right-content'>
-        <h2 class='buy-item-text'>
-          <%= "商品名：#{cart_return.return.return_name}" %>
-        </h2>
-        <div class='buy-item-price'>
-          <p class='item-price-text'>値段：<%= cart_return.return.return_price %></p>
-        </div>
-           <div class='buy-item-quantity'>
-          <p class='item-price-text'>個数：<%= cart_return.quantity %></p>
-        </div>
+        <h2 class='buy-item-text'><%= cart_return.return.return_name %> </h2>
+        <p class='item-price-quantity'>個数：<%= cart_return.quantity %></p>
+        <p class='item-price-text'><%= number_to_currency(cart_return.return.return_price.to_s, locale:"jp") %></p>
       </div>
 
       <% price = cart_return.return.return_price.to_i %>

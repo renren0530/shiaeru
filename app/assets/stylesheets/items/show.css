@@ -66,14 +66,15 @@ p.text{
   margin:15px 15px 15px 0;
   padding:20px;
   width:300px;
-  height:350px;
+  height:380px;
 }
 
 p.returns-name{
   font-family: serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   margin:0 0 10px 0;
+  height:40px;
 }
 
 .returns-image{
@@ -82,7 +83,7 @@ p.returns-name{
 }
 
 p.item-price{
-  font-size: 18px;
+  font-size: 17px;
   font-family: serif;
   color:#444444;
   margin:10px 0 ;
@@ -108,8 +109,18 @@ p.donate{
   border:1px solid black;
   text-align: center;
   border-radius: 5px;
-
   }
 
+  .orner-edit{
+    text-decoration: none;
+    color:gray;
+  }
 
 /* _@return */
+
+span.purchase-btn-text{
+  margin:0 0 0px 860px;
+  color:gray;
+  font-size: 15px;
+  font-weight: bold;
+}

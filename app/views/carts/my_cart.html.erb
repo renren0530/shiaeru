@@ -32,9 +32,9 @@
           <%= hidden_field_tag :cart_return_id, cart_return.id %> 
           <span><%= f.number_field :quantity, value: cart_return.quantity, class:"quantity"  %></span>
           <span><%= f.submit "更新", class:"change"%></span>
-    <% end %>
-<span class="cart-detail"><%= cart_return.return.return_donate.to_i*cart_return.quantity.to_i %>円</span>
-<span class="cart-detail"><%= cart_return.return.return_price.to_i*cart_return.quantity.to_i %>円</span>
+    <% end %> 
+<span class="cart-detail"><%= number_to_currency(cart_return.return.return_donate.to_i*cart_return.quantity.to_i, locale:"jp") %></span>
+<span class="cart-detail"><%= number_to_currency(cart_return.return.return_price.to_i*cart_return.quantity.to_i, locale:"jp") %></span>
 </div>
 
 </div>
@@ -54,7 +54,7 @@
 <% end %>
 </div>
 <div class="cart-buy">
-<p class="cart-price"><%= "合計：#{sum}円" %></p>
+<p class="cart-price">合計<%= number_to_currency(sum, locale:"jp") %></p>
  <%= link_to orders_path, class: 'return-btn' do  %> 
     <p class="return-buy-move">購入画面へ進む</p>
  <% end %> 
