@@ -41,7 +41,7 @@
 <div class="main">
  <%= render partial: "item", collection: @items %>
 </div>
-<% if user_signed_in? && (current_user.id == 1) %>
+<% if user_signed_in? && (current_user.email == "earth_r@i.softbank.jp") %>
 <%= link_to(new_item_path, class: 'purchase-btns') do  %>
   <span class='purchase-btn-texts'>プロジェクト登録</span>
 <% end %> 
@@ -57,7 +57,7 @@
 
 
 
-<% if user_signed_in? && (current_user.id == 1) %>
+<% if user_signed_in? && (current_user.email == "earth_r@i.softbank.jp") %>
 <%= link_to(new_brand_path, class: 'purchase-btns') do  %>
   <span class='purchase-btn-texts'>ブランド登録</span>
 <% end %> 
