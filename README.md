@@ -10,6 +10,8 @@
 
 # URL
 
+・https://shiaeru.herokuapp.com/
+
 # テスト用アカウント
 
 ・管理ユーザー<br>
