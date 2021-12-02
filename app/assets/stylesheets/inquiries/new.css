@@ -1,14 +1,15 @@
 .inquiry{
   text-align: center;
-
+  font-family: serif;
+  margin:50px 0 20px;
 }
 
-.new_inquiry{
+.inquiry-forms{
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 30px;
-
+  margin:0 0 50px 0;
+  font-family: serif;
 
 }
 

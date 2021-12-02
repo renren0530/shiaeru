@@ -4,26 +4,24 @@
   <tbody class="form-tbody">
     <tr>
       <td class="text-center" style="width: 30%;">お名前</td>
-      <td class="text-center"><%= @inquiry.name %></td>
+      <td class="text-detail"><%= @inquiry.name %></td>
     </tr>
     <tr>
       <td class="text-center">電話番号</td>
-      <td class="text-center" style="white-space: pre-wrap;"><%= @inquiry.phone_number %></td>
+      <td class="text-detail" style="white-space: pre-wrap;"><%= @inquiry.phone_number %></td>
     </tr>
     <tr>
       <td class="text-center">メールアドレス</td>
-      <td class="text-center" style="white-space: pre-wrap;"><%= @inquiry.email %></td>
+      <td class="text-detail" style="white-space: pre-wrap;"><%= @inquiry.email %></td>
     </tr>
     <tr>
       <td class="text-center">お問い合わせ内容</td>
-      <td class="text-center" style="white-space: pre-wrap;"><%= @inquiry.message %></td>
+      <td class="text-detail" style="white-space: pre-wrap;"><%= @inquiry.message %></td>
     </tr>
   </tbody>
 </table>
 
 <div class="check-form">
-
-
 
 <%= form_for(@inquiry) do |f| %>
   <%= f.hidden_field :name %>

@@ -5,8 +5,6 @@ class Return < ApplicationRecord
   has_many :buys
   has_many :cart_returns
 
-
-
   validates :return_name, presence: true
   validates :return_info, presence: true
   validates :return_price, presence: true

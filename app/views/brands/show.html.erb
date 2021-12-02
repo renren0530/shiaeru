@@ -1,6 +1,10 @@
 <%= render "shared/header" %>
+<div class="brand-content">
+<div class="brand-image"><%= image_tag @brand.image, size:"500" %></div>
+<div class="brand-text", style="white-space:pre-wrap;"><%= @brand.brand_info %></div>
+</div>
 
-<h1 class="brand-detail"><%= "#{@brand.brand_name}の商品一覧" %></h1>
+<h2 class="brand-detail"><%= "商品一覧" %></h2>
 <div class="brand-return">
 <% @returns.each do |returns| %>
 <% if returns.brand_kinds_id == @brand.id  %>
@@ -14,7 +18,7 @@
 <% end %>
 <% end %>
 </div>
-  <p class="text", style="white-space:pre-wrap;"><%= @brand.brand_info %></p>
+ 
 
 <%= render "shared/footer" %>
 

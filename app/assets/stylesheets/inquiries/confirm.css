@@ -1,16 +1,14 @@
 table.form-table{
   margin:20px 20px 0;
+  font-family: serif;
 }
 
 .check-form{
 display:flex;
-
+margin:20px 0 30px 20px;
 }
 
-td.text-center{
-  width:200px;
+td.text-detail{
+  word-wrap: normal;
 }
 
-tbody.form-tbody{
-width:100%;
-}

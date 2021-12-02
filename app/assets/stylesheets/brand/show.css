@@ -1,12 +1,28 @@
+.brand-content{
+  display:flex;
+  margin:0 10vh;
+}
+
+.brand-image{
+  margin:50px 0 10px 0;
+  border:1px solid gray;
+}
+
+.brand-text{
+  margin:60px 0 0 50px;
+  font-family: serif;
+}
+
 .brand-detail{
   text-align: center;
   font-family: serif;
-  margin:50px 0;
+  margin:30px 0;
 }
 
 .brand-return{
   display:flex;
   flex-wrap: wrap;
+  margin:0 10vh 50px;
 }
 
 
@@ -16,8 +32,8 @@
   border-top: solid 5px gray;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
   border-radius: 10px;
-  margin:15px 15px 15px 0;
+  margin:15px 7px 15px 7px;
   padding:20px;
-  width:297px;
+  width:258px;
   height:380px;
 }
