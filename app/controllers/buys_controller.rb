@@ -1,4 +1,6 @@
 class BuysController < ApplicationController
+before_action :authenticate_user!, only: [:show, :buy, :create]  
+
   
   def show
     @order_residence = OrderResidence.new

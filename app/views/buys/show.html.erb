@@ -9,14 +9,10 @@
     <%# 購入内容の表示 %>
       <%= image_tag @return.images[0], class: 'buy-item-img' %>
       <div class='buy-item-right-content'>
-        <h2 class='buy-item-text'>
-          <%= "商品名：#{@return.return_name}" %>
-        </h2>
-        <div class='buy-item-price'>
-          <p class='item-price-text'>値段：<%= @return.return_price %></p>
-        </div>
+        <h2 class='buy-item-text'><%= @return.return_name %></h2>
+        <p class='item-price-quantity'>個数：<%= @buy.quantity %></p>
+        <p class='item-price-text'><%= number_to_currency(@return.return_price.to_s, locale:"jp") %></p>
            <div class='buy-item-quantity'>
-          <p class='item-price-text'>個数：<%= @buy.quantity %></p>
         </div>
       </div>  
     <%# /購入内容の表示 %>
@@ -32,7 +28,7 @@
           <% price = @return.return_price.to_i %>
           <% quantity = @buy.quantity.to_i %>
           <% sum = price*quantity %>
-      <%= "#{sum}円" %>
+      <%= number_to_currency(sum.to_s, locale:"jp") %>
 
       </p>
     </div>

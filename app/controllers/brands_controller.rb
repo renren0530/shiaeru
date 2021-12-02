@@ -1,4 +1,9 @@
 class BrandsController < ApplicationController
+  before_action :authenticate_user!, except: [:show]  
+  before_action :set_action, only: [:new, :create, :edit, :update, :destroy]
+
+
+
   def new 
     @brand = Brand.new
   end
@@ -41,6 +46,12 @@ class BrandsController < ApplicationController
   private
 def brand_params
   params.require(:brand).permit(:brand_name, :brand_info, :image)
+end
+
+def set_action
+  unless user_signed_in? && (current_user.email == "earth_r@i.softbank.jp")
+    redirect_to root_path
+  end
 end
 
 end

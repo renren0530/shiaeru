@@ -46,15 +46,6 @@
 
 }
 
-.buy-item-price {
-  display: flex;
-  font-weight: bold;
-  align-items: center;
-  font-family: serif;
-  font-size: 15px;
-  margin-top: 10px;
-}
-
 p.item-price-quantity {
   font-size: 20px;
   font-family: serif;

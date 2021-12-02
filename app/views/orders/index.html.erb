@@ -33,7 +33,7 @@
         支払金額
       </h1>
       <p class='item-payment-price'>
-      <%= "#{sum}円" %>
+      <%= number_to_currency(sum.to_s, locale:"jp") %>
 
       </p>
     </div>

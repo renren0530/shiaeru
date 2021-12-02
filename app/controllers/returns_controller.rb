@@ -1,8 +1,6 @@
 class ReturnsController < ApplicationController
-
-  def index
-    @returns = Return.all
-  end
+  before_action :authenticate_user!, except: [:show]
+  before_action :set_action, only: [:new, :create, :edit, :update, :destroy]
 
   def new
   @return = Return.new
@@ -55,6 +53,12 @@ class ReturnsController < ApplicationController
 private
 def return_params
   params.require(:return).permit(:return_name, :return_info, :return_price, :return_donate, :brand_kinds_id, images:[]).merge(item_id: params[:item_id])
+end
+
+def set_action
+  unless user_signed_in? && (current_user.email == "earth_r@i.softbank.jp")
+    redirect_to root_path
+  end
 end
 
 end

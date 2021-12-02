@@ -1,5 +1,7 @@
 class ItemsController < ApplicationController
-
+  before_action :authenticate_user!, except: [:index, :show]
+  before_action :set_action, only: [:new, :create, :edit, :update, :destroy]
+ 
   def index
     @items = Item.all.order('created_at ASC')
     @brands = Brand.all.order('created_at ASC')
@@ -48,6 +50,12 @@ private
 def item_params
   params.require(:item).permit(:item_name, :item_info, :image).merge(user_id: current_user.id)
 end
+
+def set_action
+  unless user_signed_in? && (current_user.email == "earth_r@i.softbank.jp")
+    redirect_to root_path
+  end
 end
 
+end
 

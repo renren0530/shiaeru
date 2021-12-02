@@ -1,4 +1,5 @@
 class CartsController < ApplicationController
+before_action :authenticate_user!, only: [:my_cart, :add_item, :update_item, :delete_item]  
 
   # カート内アイテムの表示
   def my_cart
@@ -19,10 +20,8 @@ class CartsController < ApplicationController
       @cart_return.delete
     end   
     end 
-
     @cart_return.save
     redirect_to my_cart_path
-
   end
 
   # アイテムの更新
@@ -46,5 +45,8 @@ class CartsController < ApplicationController
    end
    redirect_to my_cart_path
   end
+
+
+
 
 end

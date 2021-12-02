@@ -1,4 +1,5 @@
 class OrdersController < ApplicationController
+  before_action :authenticate_user!, only: [:index, :create]
 
   def index
     # @item = Item.find(params[:item_id])
@@ -6,12 +7,6 @@ class OrdersController < ApplicationController
     @order_residence = OrderResidence.new
     @cart = current_user.cart
   end  
-
-  def show
-    binding.pry
-    @item = Item.find(params[:item_id])
-    @return = Return.find(params[:id])
-  end
 
   def create
     @cart = current_user.cart
