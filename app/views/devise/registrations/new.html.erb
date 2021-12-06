@@ -2,9 +2,9 @@
 
 <h1 class="new-registration">新規登録</h1>
 
-<div class="registrations-form">
 
 <%= form_with model: @user, url: user_registration_path, local: true do |f| %>
+<div class="registrations-form">
   <%= render "devise/shared/error_messages", resource: resource %>
 
    <div class="field">

@@ -1,12 +1,12 @@
 .project-show{
-  margin:50px 150px 20px;
+  margin:50px 10vh 20px;
   font-size: 25px;
   font-weight: bold;
   font-family: serif;
 }
 
 .project-image{
-margin:20px 150px 20px;
+margin:20px 10vh 20px;
 }
 
 .project-img{
@@ -15,11 +15,11 @@ margin:20px 150px 20px;
 
 .project-content{
   display:flex;
-  margin:20px 150px 20px;
+  margin:20px 10vh 20px;
 }
 
 .project-detail{
-  width:50vw;
+  width:65vw;
 }
 
 .project-text{
@@ -32,16 +32,16 @@ margin:20px 150px 20px;
 }
 
 p.text{
-  margin:20px 40px 20px 0;
+  margin:40px 50px 20px 0;
   font-size: 15px;
   font-family: serif;
 
 }
 
 .project-return{
-  width:30vw;
   display:flex;
   flex-direction: column;
+  margin-left:20px;
 }
 
 .project-text-price{
@@ -119,7 +119,7 @@ p.donate{
 /* _@return */
 
 span.purchase-btn-text{
-  margin:0 0 0px 860px;
+  margin:0 0 0px 980px;
   color:gray;
   font-size: 15px;
   font-weight: bold;

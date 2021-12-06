@@ -1,7 +1,5 @@
-<div class="items-sell-contents">
-  <header class="items-sell-header">
-    <%= link_to image_tag('items/yoko_color.png' , size: '200x80'), "/" %>
-  </header>
+<%= render "shared/header" %>
+
 
  <div class="items-sell-main">
     <h2 class="items-sell-title">商品の情報を入力</h2>
@@ -69,7 +67,7 @@
     <%# 寄付価格 %>
 
       <%# ブランド %>
-      <div class="form-group">
+      <div class="brand-group">
         <div class='form-text-wrap'>
           <label class="form-text">ブランド</label>
           <span class="indispensable">必須</span>
@@ -87,6 +85,7 @@
 
     <% end %>
   </div>
-</div>
+
+<%= render "shared/footer" %>
 
 

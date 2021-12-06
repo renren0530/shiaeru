@@ -10,12 +10,15 @@
   align-items: center;
   margin:0 0 50px 0;
   font-family: serif;
-
 }
 
 .form-group{
 margin-left: 250px;
 padding: 0;
+}
+
+.form-control{
+  resize:none;
 }
 
 p.contents{

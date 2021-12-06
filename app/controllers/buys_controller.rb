@@ -1,7 +1,6 @@
 class BuysController < ApplicationController
-before_action :authenticate_user!, only: [:show, :buy, :create]  
+  before_action :authenticate_user!, only: [:show, :buy, :create]
 
-  
   def show
     @order_residence = OrderResidence.new
     @return = Return.find(params[:return_id])
@@ -13,10 +12,10 @@ before_action :authenticate_user!, only: [:show, :buy, :create]
     @return = Return.find(params[:return_id])
     @buy = Buy.new(return_id: @return.id, quantity: params[:quantity])
     if @buy.save
-      redirect_to item_return_buy_path(@item.id,@return.id,@buy.id)
+      redirect_to item_return_buy_path(@item.id, @return.id, @buy.id)
     else
-    @item = Item.find(params[:item_id])
-    render "returns/show"
+      @item = Item.find(params[:item_id])
+      render 'returns/show'
     end
   end
 
@@ -27,28 +26,28 @@ before_action :authenticate_user!, only: [:show, :buy, :create]
       pay_item
       @order_residence.save
       @order = Order.order(updated_at: :desc).limit(1)
-        order_return = OrderReturn.new(order_id: @order.ids[0], return_id: @buy.return_id, quantity: @buy.quantity )
-        order_return.save   
+      order_return = OrderReturn.new(order_id: @order.ids[0], return_id: @buy.return_id, quantity: @buy.quantity)
+      order_return.save
       redirect_to root_path
     else
       render :index
     end
-  end  
+  end
 
   private
+
   def order_params
     params.require(:order_residence).permit(:postal_code, :item_prefecture_id, :city, :addresses, :building, :phone_number).merge(
       user_id: current_user.id, token: params[:token]
     )
-  end 
-  
-  def pay_item
-    Payjp.api_key = ENV["PAYJP_SECRET_KEY"]
-    Payjp::Charge.create(
-      amount: params[:sum] ,
-      card: order_params[:token],    
-      currency: 'jpy'                 
-    )
-  end  
+  end
 
+  def pay_item
+    Payjp.api_key = ENV['PAYJP_SECRET_KEY']
+    Payjp::Charge.create(
+      amount: params[:sum],
+      card: order_params[:token],
+      currency: 'jpy'
+    )
+  end
 end

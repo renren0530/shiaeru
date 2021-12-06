@@ -4,27 +4,29 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: [:facebook, :google_oauth2]
 
-has_many :items
-has_many :orders
-has_many :sns_credentials
-has_one :cart
+  has_many :items
+  has_many :orders
+  has_many :sns_credentials
+  has_one :cart
 
-def self.from_omniauth(auth)
-  sns = SnsCredential.where(provider: auth.provider, uid: auth.uid).first_or_create
-  user = User.where(email: auth.info.email).first_or_initialize(
-    nickname: auth.info.name,
-    email: auth.info.email
-  )
+  validates :nickname, presence: true
 
-  if user.persisted?
-    sns.user = user
-    sns.save
+
+  def self.from_omniauth(auth)
+    sns = SnsCredential.where(provider: auth.provider, uid: auth.uid).first_or_create
+    user = User.where(email: auth.info.email).first_or_initialize(
+      nickname: auth.info.name,
+      email: auth.info.email
+    )
+
+    if user.persisted?
+      sns.user = user
+      sns.save
+    end
+    { user: user, sns: sns }
   end
-  { user: user, sns: sns }
-end
 
-def prepare_cart
-  cart || create_cart
-end
-
+  def prepare_cart
+    cart || create_cart
+  end
 end

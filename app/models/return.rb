@@ -10,5 +10,4 @@ class Return < ApplicationRecord
   validates :return_price, presence: true
   validates :return_donate, presence: true
   validates :images, presence: true
-
 end

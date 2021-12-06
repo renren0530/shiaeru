@@ -12,6 +12,11 @@ flex-direction: column;
 align-items: center;
 }
 
+.login-flash-message{
+  margin-bottom:20px;
+
+}
+
 span.password-forget{
   margin-bottom:10px;
 }

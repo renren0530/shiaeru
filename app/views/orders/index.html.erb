@@ -40,6 +40,8 @@
     <%# /支払額の表示 %>
   
     <%= form_with model: @order_residence, url:orders_path, id: 'charge-form', class: 'transaction-form-wrap',local: true do |f| %>
+    <%= render 'shared/error_messages', model: @order_residence %>
+
     <%= hidden_field_tag :sum, sum  %>
 
   

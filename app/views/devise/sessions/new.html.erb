@@ -2,8 +2,18 @@
 
 <h1 class="login">ログイン</h1>
 
-<div class="login-form">
+ 
+
 <%= form_with model: @user, url: user_session_path, local: true do |f| %>
+
+<div class="login-form">
+
+<div class='login-flash-message'>
+    <%= flash[:notice] %>
+    <%= flash[:alert] %>
+  </div>  
+
+
   <div class="field">
     <%= f.label :"メールアドレス" %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
@@ -27,4 +37,5 @@
 <span><%= link_to 'トップページへ戻る', "/", class:"top-page-btn" %></span>
 
 </div>
+
 <%= render "shared/footer" %>

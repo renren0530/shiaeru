@@ -8,9 +8,7 @@ class InquiriesController < ApplicationController
   # 送信ボタンを押されたらcreateアクションを実行します。
   def confirm
     @inquiry = Inquiry.new(inquiry_params)
-    if @inquiry.invalid?
-      render :new
-    end
+    render :new if @inquiry.invalid?
   end
 
   # 実際に送信するアクションになります。
@@ -38,7 +36,6 @@ class InquiriesController < ApplicationController
                   :name,
                   :phone_number,
                   :subject,
-                  :message
-                 )
+                  :message)
   end
 end

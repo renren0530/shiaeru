@@ -3,13 +3,13 @@ class ReturnsController < ApplicationController
   before_action :set_action, only: [:new, :create, :edit, :update, :destroy]
 
   def new
-  @return = Return.new
-  end  
+    @return = Return.new
+  end
 
   def show
     @item = Item.find(params[:item_id])
     @return = Return.find(params[:id])
-  end  
+  end
 
   def create
     @item = Item.find(params[:item_id])
@@ -23,7 +23,7 @@ class ReturnsController < ApplicationController
 
   def edit
     @return = Return.find(params[:id])
-  end  
+  end
 
   def update
     @item = Item.find(params[:item_id])
@@ -34,12 +34,12 @@ class ReturnsController < ApplicationController
         image = @return.images.find(image_id)
         image.purge
       end
-    end  
-        
+    end
+
     if @return.update(return_params)
-     redirect_to item_path(@item.id)
+      redirect_to item_path(@item.id)
     else
-     render :edit
+      render :edit
     end
   end
 
@@ -50,15 +50,14 @@ class ReturnsController < ApplicationController
     redirect_to item_path(@item.id)
   end
 
-private
-def return_params
-  params.require(:return).permit(:return_name, :return_info, :return_price, :return_donate, :brand_kinds_id, images:[]).merge(item_id: params[:item_id])
-end
+  private
 
-def set_action
-  unless user_signed_in? && (current_user.email == "earth_r@i.softbank.jp")
-    redirect_to root_path
+  def return_params
+    params.require(:return).permit(:return_name, :return_info, :return_price, :return_donate, :brand_kinds_id,
+                                   images: []).merge(item_id: params[:item_id])
   end
-end
 
+  def set_action
+    redirect_to root_path unless user_signed_in? && (current_user.email == 'earth_r@i.softbank.jp')
+  end
 end
