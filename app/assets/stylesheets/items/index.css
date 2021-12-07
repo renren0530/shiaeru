@@ -1,5 +1,5 @@
 .title-contents{
-  opacity: 1;
+  opacity: 0.9;
   background-repeat: no-repeat;
   background-position:center;
   height:380px;
@@ -17,25 +17,13 @@ h1.service-title1{
   4px 4px 2px rgba(0,0,0,0.5);
   margin-top:80px;
 }
-@media(min-width:459px){
-  h1.service-title2{
-    font-size: 35px;
-    font-weight: bold;
-    text-shadow: 0px 0px 1px #000,
-    4px 4px 2px rgba(0,0,0,0.5);
-    margin-top:20px;
-  }
-}
-  
 
-@media(max-width:459px){
 h1.service-title2{
-  font-size: 10px;
+  font-size: 35px;
   font-weight: bold;
   text-shadow: 0px 0px 1px #000,
   4px 4px 2px rgba(0,0,0,0.5);
   margin-top:20px;
-}
 }
 
 h1.service-title3{
@@ -48,11 +36,7 @@ h1.service-title3{
 
 .shiaeru-explanation{
   font-size: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height:20vh;
+  margin:70px auto;
 }
 
 .shiaeru-project{
@@ -61,6 +45,16 @@ h1.service-title3{
   font-weight: 800;
   text-align: center;
   font-family:serif;
+}
+
+p.shiaeru-detail{
+  text-align: center;
+  font-weight: bold;
+  font-family:serif;
+  font-size: 19px;
+  margin: 5px 0 10px 0 ;
+
+
 }
 
 .shiaeru-project:before {
@@ -77,44 +71,49 @@ h1.service-title3{
 .shiaeru-content{
   display: flex;
   justify-content: center;
+  align-items: center;
   border-radius: 10px;
   border-top: solid 5px gray;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
   width:800px;
-  height:170px;
+  height:300px;
   margin:auto;
+  padding:10px;
 }
 
 .activities{
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding:10px;
-
 }
 
 .shiaeru-icon{
 }
 
 p.sub-title{
-margin-left: 5vw;
+
 font-size: 15px;
+font-weight: bold;
 }
 
 .shiaeru-btn{
 background-color: #eb6100;
 border-bottom: 5px solid #b84c00;
 text-decoration: none;
-margin-left: 20px;
 border-radius: 5px;
-padding:15px;
+padding:10px;
+width:110px;
+text-align: center;
+margin:10px auto 0;
 }
 
-span.shiaeru-text{
+p.shiaeru-text{
   color:#fff;
-  font-size: 15px;
-  font-weight: 700;
+  font-size: 13px;
+  font-weight: bold;
   font-family: serif;
+  margin:0;
+
 }
 
 .project-title{

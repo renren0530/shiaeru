@@ -29,9 +29,7 @@ end
     end
    collection do
     get 'pay'
-    get 'exchange'
-    get 'delivery'
-    get  "inquiry"
+    get 'shiaeru'
     end 
   end  
 

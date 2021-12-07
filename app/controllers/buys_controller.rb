@@ -21,6 +21,7 @@ class BuysController < ApplicationController
 
   def create
     @buy = Buy.find(params[:buy_id])
+    @return = Return.find(params[:return_id])
     @order_residence = OrderResidence.new(order_params)
     if @order_residence.valid?
       pay_item
@@ -30,7 +31,7 @@ class BuysController < ApplicationController
       order_return.save
       redirect_to root_path
     else
-      render :index
+      render :show
     end
   end
 

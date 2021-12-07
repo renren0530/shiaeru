@@ -1,2 +1,12 @@
-residence:
-    postal_code: "空になっています。入力してください。"
+ja:
+  activemodel:
+    attributes:
+      order_residence: 
+        postal_code: 郵便番号
+        city: 市区町村
+        addresses: 番地
+        building: 建物名
+        phone_number: 電話番号
+        item_prefecture_id: 都道府県
+        token: カード情報
+        
