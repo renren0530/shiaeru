@@ -1,8 +1,10 @@
+@media(max-width: 480px){
+
 .title-contents{
   opacity: 0.9;
   background-repeat: no-repeat;
   background-position:center;
-  height:380px;
+  height:140px;
   color:#fff;
   display:flex;
   flex-direction: column;
@@ -11,32 +13,31 @@
 }
 
 h1.service-title1{
-  font-size: 35px;
+  font-size: 12px;
   font-weight: bold;
   text-shadow: 0px 0px 1px #000,
   4px 4px 2px rgba(0,0,0,0.5);
-  margin-top:80px;
+  margin:20px 0 0 0;
 }
 
 h1.service-title2{
-  font-size: 35px;
+  font-size: 12px;
   font-weight: bold;
   text-shadow: 0px 0px 1px #000,
   4px 4px 2px rgba(0,0,0,0.5);
-  margin-top:20px;
+  margin:20px 0 0 0;  
 }
 
 h1.service-title3{
-  font-size: 21px;
+  font-size: 12px;
   font-weight: bold;
   text-shadow: 0px 0px 1px #000,
   4px 4px 2px rgba(0,0,0,0.5);
-  margin-top:30px;
+  margin:20px 0 0 0;
 }
 
 .shiaeru-explanation{
-  font-size: 20px;
-  margin:70px auto;
+  margin:30px auto;
 }
 
 .shiaeru-project{
@@ -45,23 +46,15 @@ h1.service-title3{
   font-weight: 800;
   text-align: center;
   font-family:serif;
+  font-size: 12px;
 }
 
-p.shiaeru-detail{
-  text-align: center;
-  font-weight: bold;
-  font-family:serif;
-  font-size: 19px;
-  margin: 5px 0 10px 0 ;
-
-
-}
 
 .shiaeru-project:before {
   position: absolute;
   content: '';
-  width: 70px;
-  height: 4px;
+  width: 30px;
+  height: 2px;
   background-color:gray;
   bottom: -10px;
   left: 50%;
@@ -75,8 +68,8 @@ p.shiaeru-detail{
   border-radius: 10px;
   border-top: solid 5px gray;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
-  width:800px;
-  height:300px;
+  width:300px;
+  height:250px;
   margin:auto;
   padding:10px;
 }
@@ -84,17 +77,19 @@ p.shiaeru-detail{
 .activities{
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: column; 
 }
 
-.shiaeru-icon{
+p.shiaeru-detail{
+  text-align: center;
+  font-family:serif;
+  font-size: 10px;
+  margin: 5px 0 10px 0 ;
 }
 
 p.sub-title{
-
-font-size: 15px;
-font-weight: bold;
-font-family:serif;
+  font-size: 10px;
+  font-family:serif;
 
 }
 
@@ -104,14 +99,14 @@ border-bottom: 5px solid #b84c00;
 text-decoration: none;
 border-radius: 5px;
 padding:10px;
-width:110px;
+width:80px;
 text-align: center;
 margin:10px auto 0;
 }
 
 p.shiaeru-text{
   color:#fff;
-  font-size: 13px;
+  font-size: 10px;
   font-weight: bold;
   font-family: serif;
   margin:0;
@@ -119,7 +114,7 @@ p.shiaeru-text{
 }
 
 .project-title{
-  font-size: 20px;
+  font-size: 12px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -137,8 +132,8 @@ position: relative;
 .project-list:before{
   position: absolute;
   content: '';
-  width: 70px;
-  height: 4px;
+  width: 30px;
+  height: 2px;
   background-color:gray;
   bottom: -10px;
   left: 50%;
@@ -149,7 +144,7 @@ position: relative;
   display:flex;
   flex-wrap: wrap;
   justify-content: start;
-  margin:0 10vh 20px;
+  margin:0 0 20px;
 }
 
 /* _item */
@@ -159,9 +154,9 @@ position: relative;
   border-top: solid 5px gray;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
   border-radius: 10px;
-  width:278px;
-  height:270px;
-  margin:0 0.5vw 1vw;
+  width:150px;
+  height:200px;
+  margin:0 2.2vw 3vw;
   padding:10px;
   font-size: 15px;
   font-weight: bold;
@@ -176,12 +171,14 @@ position: relative;
 }
 
 .item-img {
-  height:200px;
+  height:150px;
+  width:150px;
   border-radius: 10px;
 }
 
 p.item-info{
   padding:0;
+  font-size: 10px;
 }
 
 .orner-edit-btn{
@@ -210,5 +207,6 @@ span.purchase-btn-texts{
   color:gray;
   font-weight:bold;
   margin-left:90px;
+}
 
 }
