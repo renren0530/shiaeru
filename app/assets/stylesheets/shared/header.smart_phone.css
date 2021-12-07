@@ -52,10 +52,9 @@
     align-items: center;
     list-style: none;
     margin-right:5px;
-    font-size: 10px;
    } 
   
-  .nav__item {
+  li.nav__item {
     margin:5px;
   }
     
@@ -63,8 +62,7 @@
     text-decoration: none;
     color: black;
     font-weight:bold;
-    font-family:serif;
-  
+    font-size: 5px;
   }
   
   span.cart_icon{

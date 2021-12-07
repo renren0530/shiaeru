@@ -34,26 +34,14 @@ h1.service-title3{
   margin-top:30px;
 }
 
-.shiaeru-explanation{
-  font-size: 20px;
-  margin:70px auto;
-}
-
 .shiaeru-project{
   position: relative;
   color: #333333;
   font-weight: 800;
   text-align: center;
   font-family:serif;
-}
-
-p.shiaeru-detail{
-  text-align: center;
-  font-weight: bold;
-  font-family:serif;
-  font-size: 19px;
-  margin: 5px 0 10px 0 ;
-
+  margin:50px auto;
+  font-size: 20px;
 
 }
 
@@ -87,11 +75,15 @@ p.shiaeru-detail{
   flex-direction: column;
 }
 
-.shiaeru-icon{
+p.shiaeru-detail{
+  text-align: center;
+  font-weight: bold;
+  font-family:serif;
+  font-size: 19px;
+  margin: 5px 0 10px 0 ;
 }
 
 p.sub-title{
-
 font-size: 15px;
 font-weight: bold;
 font-family:serif;
@@ -115,23 +107,16 @@ p.shiaeru-text{
   font-weight: bold;
   font-family: serif;
   margin:0;
-
-}
-
-.project-title{
-  font-size: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height:20vh;
-  font-family:serif;
-  font-weight: 800;
-  color:#333333;
 }
 
 h3.project-list{
-position: relative;
+  position: relative;
+  color: #333333;
+  font-weight: 800;
+  text-align: center;
+  font-family:serif;
+  margin:50px auto;
+  font-size: 20px;
 }
 
 .project-list:before{
@@ -192,19 +177,7 @@ p.item-info{
 /* _item */
 
 
-.purchase-btn{
-  /* position:fixed;
-  right: 0;
-  bottom: 0;
-  display:flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 10px;
-  padding: 10px;
-  background-color:cadetblue;
-  margin: 15px; */
 
-}
 
 span.purchase-btn-texts{
   color:gray;
