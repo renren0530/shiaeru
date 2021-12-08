@@ -6,10 +6,10 @@
 <div class="carts">
 <div class="cart-title">
 <span class="cart-product">商品名</span>
-<div>
+<div class="cart-subtitle">
 <span class="cart-details">個数</span>
 <span class="cart-details">寄付額</span>
-<span class="cart-details">価格</span>
+<span class="cart-value">価格</span>
 </div>
 
 </div>
@@ -21,23 +21,27 @@
 
 <div class="cart-main">
 <div class="cart-btn">
+<div class="product-name">
 <%= link_to(item_return_id_path(cart_return.return.item_id, cart_return.return_id), class: 'back-btn') do  %> 
-<%= image_tag cart_return.return.images[0], size:"150", class:"cart-image" %>   
+<%= image_tag cart_return.return.images[0], width:"150", class:"cart-image" %>   
 <p class="cart-name"><%= cart_return.return.return_name %></p>
 <% end %>
+</div>
 
 
 <div class="cart-donate-price">
     <%= form_with url: update_item_path, class:"cart-quantity", method: :post, local: true do |f| %>
           <%= hidden_field_tag :cart_return_id, cart_return.id %> 
-          <span><%= f.number_field :quantity, value: cart_return.quantity, class:"quantity"  %></span>
+          <span><%= f.number_field :quantity, value: cart_return.quantity, class:"quantity" %></span>
           <span><%= f.submit "更新", class:"change"%></span>
     <% end %> 
-<span class="cart-detail"><%= number_to_currency(cart_return.return.return_donate.to_i*cart_return.quantity.to_i, locale:"jp") %></span>
-<span class="cart-detail"><%= number_to_currency(cart_return.return.return_price.to_i*cart_return.quantity.to_i, locale:"jp") %></span>
+<span class="cart-details"><%= number_to_currency(cart_return.return.return_donate.to_i*cart_return.quantity.to_i, locale:"jp") %></span>
+<span class="cart-value"><%= number_to_currency(cart_return.return.return_price.to_i*cart_return.quantity.to_i, locale:"jp") %></span>
 </div>
 
 </div>
+
+
 
     <%= form_with url: delete_item_path, method: :delete, local: true do |f| %>
       <%= hidden_field_tag :return_id, cart_return.return_id %>
@@ -54,7 +58,7 @@
 <% end %>
 </div>
 <div class="cart-buy">
-<p class="cart-price">合計<%= number_to_currency(sum, locale:"jp") %></p>
+<p class="cart-price">合計：<%= number_to_currency(sum, locale:"jp") %></p>
  <%= link_to orders_path, class: 'return-btn' do  %> 
     <p class="return-buy-move">購入画面へ進む</p>
  <% end %> 

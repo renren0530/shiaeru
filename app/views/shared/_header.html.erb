@@ -9,14 +9,14 @@
 
          <ul class="nav__wrapper">
            <% if user_signed_in? %> 
-           <li class="nav__item"><%= link_to "買い物かご", my_cart_path %>
+           <li class="nav__item"><%= link_to "買い物かご", my_cart_path, class:"header_page" %>
             <span class="cart_icon", id="cart_icon"></span>
           </li>
-           <li class="nav__item"><%= link_to "マイページ", mypage_user_path(current_user.id) %></li>
-           <li class="nav__item"><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+           <li class="nav__item"><%= link_to "マイページ", mypage_user_path(current_user.id), class:"header_page" %></li>
+           <li class="nav__item"><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class:"header_page" %></li>
            <% else %>
-           <li class="nav__item"><%= link_to '新規登録', new_user_registration_path %></li>
-           <li class="nav__item"><%= link_to 'ログイン', new_user_session_path %></li>   
+           <li class="nav__item"><%= link_to '新規登録', new_user_registration_path, class:"header_page" %></li>
+           <li class="nav__item"><%= link_to 'ログイン', new_user_session_path, class:"header_page" %></li>   
        
            <% end %>
          </ul>  

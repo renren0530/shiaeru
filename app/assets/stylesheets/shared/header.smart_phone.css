@@ -49,7 +49,6 @@
 
   .nav__wrapper {
     display:flex;
-    align-items: center;
     list-style: none;
     margin-right:5px;
    } 
@@ -62,8 +61,11 @@
     text-decoration: none;
     color: black;
     font-weight:bold;
-    font-size: 5px;
   }
+
+ a.header_page {
+  font-size:8px;
+ }
   
   span.cart_icon{
     padding:3px;

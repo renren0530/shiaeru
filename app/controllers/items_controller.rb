@@ -2,6 +2,7 @@ class ItemsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   before_action :set_action, only: [:new, :create, :edit, :update, :destroy]
 
+
   def index
     @items = Item.all.order('created_at ASC')
     @brands = Brand.all.order('created_at ASC')
@@ -52,4 +53,7 @@ class ItemsController < ApplicationController
   def set_action
     redirect_to root_path unless user_signed_in? && (current_user.email == 'earth_r@i.softbank.jp')
   end
+
+ 
+
 end

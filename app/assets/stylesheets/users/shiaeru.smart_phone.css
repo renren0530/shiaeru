@@ -1,0 +1,62 @@
+@media(max-width: 480px){
+
+  .shiaeru-detail{
+    margin:50px 10px;
+    font-family: serif;
+  }
+  
+  .shiaeru-title{
+    font-size:12px;
+    font-family: serif;
+    margin:50px 0;
+    text-align: center;
+    position: relative;
+  }
+  
+  .shiaeru-title:before {
+    position: absolute;
+    content: '';
+    width: 40px;
+    height: 2px;
+    background-color:gray;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .shiaeru-background{
+    font-family: serif;
+    margin:40px 0 0 0;
+    text-align: center;
+    font-size:12px;  
+  }
+  
+  p.shiaeru-explanation{
+    font-size:10px;  
+  }
+  
+  
+  .shiaeru-concept{
+    text-align: center;
+    font-size:12px;  
+
+  
+  }
+  
+  .shiaeru-value{
+    border:2px solid black;
+    margin:20px 0;
+    padding:10px 20px;
+   
+  
+  }
+  
+  .shiaeru-3s{
+    text-align: center;
+    font-size:12px;  
+  
+  }
+  
+  
+
+}

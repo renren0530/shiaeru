@@ -142,6 +142,10 @@ GEM
     jbuilder (2.11.2)
       activesupport (>= 5.0.0)
     jmespath (1.4.0)
+    jpmobile (6.1.2)
+      mail (~> 2.7.0)
+      rexml
+      scanf
     jwt (2.3.0)
     listen (3.7.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
@@ -282,6 +286,7 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
+    scanf (1.0.0)
     selenium-webdriver (4.0.0)
       childprocess (>= 0.5, < 5.0)
       rexml (~> 3.2, >= 3.2.5)
@@ -341,6 +346,7 @@ DEPENDENCIES
   devise
   image_processing (~> 1.2)
   jbuilder (~> 2.7)
+  jpmobile
   listen (~> 3.3)
   mini_magick
   mysql2 (~> 0.5)
