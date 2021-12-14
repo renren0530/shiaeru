@@ -5,17 +5,9 @@
    <h1 class='service-title3'>応援・ご支援・よろしくお願いいたします</h1>
 </div>
 
-
-
 <h3 class="shiaeru-project">しあえるの活動</h3>
 
-
-
-
-<div class="shiaeru-content">
-
-  
- 
+<div class="shiaeru-content"> 
 
    <div class="activities">
     <p class="shiaeru-detail"> 「みんなのできるコトから」をシェアしあえる場</p>
@@ -29,10 +21,7 @@
   
 </div>
 
-
-
 <h3 class="project-list">プロジェクト一覧</h3>
-
 
 <div class="main">
  <%= render partial: "item", collection: @items %>
@@ -43,15 +32,17 @@
 <% end %> 
 <% end %>
 
-
 <h3 class="project-list">ブランド一覧</h3>
+<p class="SDGs-text">自然環境保全に関する目標を３つ掲げています！</p>
 
+<div class="SDGs">
+<span><%= image_tag "items/SDGs.png", width:"300", height:"300", class:"sdgs" %></span>
+<span><%= image_tag "items/SDGs.goal", width:"300", height:"300", class:"sdgs" %></span>
+</div>
 
 <div class="main">
  <%= render partial: "brands/brand", collection: @brands %>
 </div>
-
-
 
 <% if user_signed_in? && (current_user.email == "earth_r@i.softbank.jp") %>
 <%= link_to(new_brand_path, class: 'purchase-btns') do  %>
@@ -60,4 +51,3 @@
 <% end %>
 
 <%= render "shared/footer" %>
-

@@ -1,0 +1,31 @@
+<%= render "shared/header" %>
+
+<div class="projects-show">
+<div class="project-show">
+  <%= @item.item_name %>
+</div>
+
+<div class="project-image">
+  <%= image_tag @item.image, class: "project-img" %> 
+</div>
+
+  <div class="project-detail">
+    <h2 class="project-text">プロジェクト本文</h2>
+    <p class="text", style="white-space:pre-wrap;"><%= @item.item_info %></p>
+  </div>   
+  <div class="project-return">
+    <h2 class="project-text-price">リターン</h2>
+    <%= render partial: "@return", collection: @returns %>
+  </div>
+
+
+<% if user_signed_in? && (current_user.email == "earth_r@i.softbank.jp") %>
+<%= link_to(new_item_return_path(@item.id), class: 'purchase-btn') do  %>
+  <span class='purchase-btn-text'>リターン登録</span>
+<% end %>
+<% end %>
+
+</div>
+
+<%= render "shared/footer" %>
+

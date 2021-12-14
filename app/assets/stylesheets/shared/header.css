@@ -1,3 +1,5 @@
+@media(min-width: 480px){
+
 .site-header-wrapper {
   display:flex;
   justify-content: space-between;
@@ -70,5 +72,5 @@ span.cart_icon{
   font-family:serif;
   padding:0;
 }
- 
- 
+
+}

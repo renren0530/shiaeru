@@ -1,3 +1,5 @@
+@media(min-width: 480px){
+
 .project-show{
   margin:50px 10vh 20px;
   font-size: 25px;
@@ -123,4 +125,5 @@ span.purchase-btn-text{
   color:gray;
   font-size: 15px;
   font-weight: bold;
+}
 }

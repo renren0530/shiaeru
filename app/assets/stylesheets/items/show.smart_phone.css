@@ -1,0 +1,135 @@
+@media(max-width: 480px){
+
+  .projects-show{
+    margin:0 5vw;
+  }
+
+  .project-show{
+    margin:20px 0 20px;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: serif;
+  }
+  
+  .project-image{
+  margin:20px 0 20px;
+  }
+  
+  .project-img{
+    width: 90vw;
+    margin:0 auto;
+  }
+ 
+  
+  .project-detail{
+    width:90vw;
+    margin:0;
+
+  }
+  
+  .project-text{
+    border-left: 6px solid #ccc;
+    color: #000;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: serif;
+  }
+  
+  p.text{
+    margin:20px 0  0;
+    font-size: 10px;
+    font-family: serif;
+  
+  }
+  
+  .project-return{
+    display:flex;
+    flex-direction: column;
+    width:90vw;
+    margin:0;
+
+  }
+  
+  .project-text-price{
+    border-left: 6px solid #ccc;
+    color: #000;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: serif;
+
+  }
+  
+  .return-detail{
+  }
+  
+  /* _@return */
+  
+  .returns-btn{
+    text-decoration: none;
+    color: #444444;
+    border-top: solid 5px gray;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+    border-radius: 10px;
+    margin:10px 0;
+    padding:20px;
+    width:70vw;
+    height:350px;
+  }
+  
+  p.returns-name{
+    font-family: serif;
+    font-size: 15px;
+    font-weight: bold;
+    margin:0 0 10px 0;
+    height:40px;
+  }
+  
+  .returns-image{
+    width:100%;
+    height:55%;
+  }
+  
+  p.item-price{
+    font-size: 15px;
+    font-family: serif;
+    color:#444444;
+    margin:10px 0 ;
+    font-weight: bold;
+  
+  }
+  
+  p.donate{
+    font-size: 12px;
+    font-weight: bold;
+    font-family: serif;
+    color:#444444;
+    margin:10px 0 ;
+  }
+  
+  .returns-text{
+    font-weight: bold;
+    font-family: serif;
+    padding: 5px;
+    font-size: 10px;
+    background-color: #f7f7f7;
+    border:1px solid black;
+    text-align: center;
+    border-radius: 5px;
+    }
+  
+    .orner-edit{
+      text-decoration: none;
+      color:gray;
+    }
+  
+  /* _@return */
+  
+  span.purchase-btn-text{
+    margin:0;
+    color:gray;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  
+
+}

@@ -1,3 +1,5 @@
+@media(min-width: 480px){
+
 .shiaeru-detail{
   margin:50px 10vh;
   font-family: serif;
@@ -46,6 +48,6 @@
 
 .shiaeru-3s{
   text-align: center;
-
 }
 
+}

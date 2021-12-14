@@ -1,3 +1,6 @@
+@media(min-width: 480px){
+
+
 .title-contents{
   opacity: 0.9;
   background-repeat: no-repeat;
@@ -91,8 +94,7 @@ font-family:serif;
 }
 
 .shiaeru-btn{
-background-color: #eb6100;
-border-bottom: 5px solid #b84c00;
+background-color: #44a73c;
 text-decoration: none;
 border-radius: 5px;
 padding:10px;
@@ -176,12 +178,27 @@ p.item-info{
 
 /* _item */
 
+.SDGs{
+  display:flex;
+  justify-content: center;
+}
 
+.sdgs{
+  margin:5px 10px 20px;
+}
+
+.SDGs-text{
+  font-size: 18px;
+  font-weight: bold;
+  font-family: serif;
+  text-align: center;
+}
 
 
 span.purchase-btn-texts{
   color:gray;
   font-weight:bold;
   margin-left:90px;
+}
 
 }

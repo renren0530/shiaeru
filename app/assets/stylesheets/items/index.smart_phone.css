@@ -10,6 +10,9 @@
   flex-direction: column;
   align-items: center;
   font-family:serif;
+
+
+
 }
 
 h1.service-title1{
@@ -18,6 +21,7 @@ h1.service-title1{
   text-shadow: 0px 0px 1px #000,
   4px 4px 2px rgba(0,0,0,0.5);
   margin:20px 0 0 0;
+
 }
 
 h1.service-title2{
@@ -26,6 +30,7 @@ h1.service-title2{
   text-shadow: 0px 0px 1px #000,
   4px 4px 2px rgba(0,0,0,0.5);
   margin:20px 0 0 0;  
+
 }
 
 h1.service-title3{
@@ -34,6 +39,7 @@ h1.service-title3{
   text-shadow: 0px 0px 1px #000,
   4px 4px 2px rgba(0,0,0,0.5);
   margin:20px 0 0 0;
+
 }
 
 .shiaeru-project{
@@ -92,8 +98,8 @@ p.sub-title{
 }
 
 .shiaeru-btn{
-background-color: #eb6100;
-border-bottom: 5px solid #b84c00;
+background-color: #44a73c;;
+
 text-decoration: none;
 border-radius: 5px;
 padding:10px;
@@ -180,6 +186,22 @@ p.item-info{
 
 /* _item */
 
+.SDGs{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sdgs{
+  margin:5px 0 20px;
+}
+
+.SDGs-text{
+  font-size: 18px;
+  font-weight: bold;
+  font-family: serif;
+  text-align: center;
+}
 
 
 

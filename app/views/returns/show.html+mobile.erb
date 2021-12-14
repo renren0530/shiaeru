@@ -1,0 +1,37 @@
+<%= render "shared/header" %>
+
+<div class="return-main">
+
+  <div class="return-images">
+    <% @return.images.each do |image| %>
+    <%= image_tag image, class: "return-image" %>
+    <% end %>
+  </div>
+
+  <div class="return-content">
+    <p class="return-text"><%= @return.return_name %></p>
+    <p class="return-price">¥ <%= number_to_currency(@return.return_price.to_s, locale:"jp") %> (税込)</p>
+    <p class="return-donate">(自然保護団体への寄付額：¥<%= number_to_currency(@return.return_donate.to_s, locale:"jp") %>)</p>
+    <%= form_with url: add_item_path, method: :post, local: true do |f| %>
+      <%= hidden_field_tag :return_id, @return.id %>
+      <%= f.number_field :quantity, value: 1, name:"quantity" %>
+      <p><%= f.submit "買い物かごへ入れる", class: "return-buy", id:"return-buy" %></p>
+    <% end %>
+
+      <%= form_with url: item_return_buy_path(item_id:@item.id, return_id:@return.id), method: :post, local: true do |f| %>
+       <%= hidden_field_tag :quantity, 1, id:"quantity-button" %>
+      <%= hidden_field_tag :return_id, @return.id %>
+      <%= hidden_field_tag :item_id, @item.id %>
+      <p><%= f.submit "今すぐ購入する", class: "return-buy" %></p>
+    <% end %>
+
+    <div class="goods">
+      <p class="goods-details">商品詳細</p>
+      <div class="goods-detail">
+      <p style="white-space:pre-wrap;"><%= @return.return_info %></p>
+      </div> 
+    </div>
+  </div> 
+</div>
+
+<%= render "shared/footer" %>

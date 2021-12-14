@@ -1,3 +1,5 @@
+@media(min-width: 480px){
+
 .footer {
   
   margin-top: 20px;
@@ -51,4 +53,4 @@ footer a {
   padding: 0;
 }
 
-
+}

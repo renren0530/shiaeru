@@ -1,0 +1,106 @@
+@media(min-width:480px) and (max-width:1100px){
+
+
+  .return-main{
+    display:flex;
+    margin:50px 2.5vw 20px;
+  }
+  
+  .return-images{
+    width:45vw;
+  }
+  
+  .return-image{
+    width:100%;
+    margin-bottom:40px;
+  }
+  
+  .return-content{
+    padding-left:5vw;
+    width:45vw;
+  }
+  
+  p.return-text{
+  font-size: 35px;
+  
+  font-family: serif;
+  margin:0;
+  }
+  
+  p.return-price{
+    font-size: 25px;
+    font-weight: bold;
+    font-family: serif;
+    margin:5px 0;
+  }
+  
+  p.return-donate{
+    font-size: 18px;
+    font-weight: bold;
+    font-family: serif;
+    margin:0 0 15px 0;
+  }
+  
+  input[type="number"]{
+    font-size: 15px;
+    font-weight: bold;
+    font-family: serif;
+    width:35px;
+    margin-bottom:0;
+  }
+  
+  p.input[type="number"]{
+    margin-bottom:0;
+  }
+  
+  .return-btn{
+    text-decoration: none;
+    color:#333;
+    text-align: center;
+  }
+  
+  .return-buy{
+    font-size: 15px;
+    font-weight: bold;
+    font-family: serif;
+    display: inline-block;
+    position: relative;
+    width: 200px;
+    padding: 0.8em;
+    text-decoration: none;
+    color: #1B1B1B;
+    background: #fff;
+    border-radius: 5px;
+    border:1px solid #1B1B1B;
+  }
+  
+  
+  
+  .return-buy:hover {
+    cursor: pointer;
+    text-decoration: none;
+    background-color: #efefef;
+  }
+  
+  .goods{
+    margin-top:4vh;
+  }
+  
+  p.goods-details{
+  margin:5px 0;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: serif;
+  }
+  
+  .goods-detail{
+    padding:10px;
+    border-radius: 5px;
+    border-top: solid 5px gray;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+    font-size: 15px;
+    font-weight: bold;
+    font-family: serif;
+  }
+  
+  }

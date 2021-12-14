@@ -1,3 +1,4 @@
+@media(min-width: 480px){
 
 .historys{
   font-family: serif;
@@ -52,4 +53,5 @@ p.buy_detail{
   font-family: serif;
   text-align: end;
   font-size: 18px;
+}
 }

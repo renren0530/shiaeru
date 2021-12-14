@@ -1,12 +1,12 @@
-@media(min-width: 480px){
+@media(max-width: 480px){
 
 .return-main{
-  display:flex;
-  margin:50px 150px 20px;
+  margin:20px 5vw 20px;
+
 }
 
 .return-images{
-  width:40vw;
+  width:100%;
 }
 
 .return-image{
@@ -15,47 +15,37 @@
 }
 
 .return-content{
-  padding-left:40px;
-  width:45vw;
+  width:100%;
+  margin:0;
 }
 
 p.return-text{
-font-size: 35px;
-
+font-size: 18px;
+font-weight: bold;
 font-family: serif;
 margin:0;
 }
 
 p.return-price{
-  font-size: 25px;
+  font-size: 18px;
   font-weight: bold;
   font-family: serif;
   margin:5px 0;
 }
 
 p.return-donate{
-  font-size: 18px;
+  font-size: 15px;
   font-weight: bold;
   font-family: serif;
   margin:0 0 15px 0;
 }
 
 input[type="number"]{
-  font-size: 15px;
+  font-size: 10px;
   font-weight: bold;
   font-family: serif;
   width:35px;
-  margin-bottom:0;
-}
-
-p.input[type="number"]{
-  margin-bottom:0;
-}
-
-.return-btn{
-  text-decoration: none;
-  color:#333;
-  text-align: center;
+  margin:0;
 }
 
 .return-buy{
@@ -71,23 +61,24 @@ p.input[type="number"]{
 	background: #fff;
 	border-radius: 5px;
 	border:1px solid #1B1B1B;
+  margin:0;
 }
-
-
 
 .return-buy:hover {
   cursor: pointer;
   text-decoration: none;
   background-color: #efefef;
+  margin:0;
 }
 
 .goods{
-  margin-top:4vh;
+  margin:4vh 0 0;
+  width:100%;
 }
 
 p.goods-details{
 margin:5px 0;
-font-size: 25px;
+font-size: 18px;
 font-weight: bold;
 font-family: serif;
 }
@@ -100,6 +91,9 @@ font-family: serif;
   font-size: 15px;
   font-weight: bold;
   font-family: serif;
+  margin:0;
 }
+
+
 
 }

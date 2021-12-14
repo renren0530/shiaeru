@@ -1,3 +1,5 @@
+@media(min-width: 480px){
+
 .brand-content{
   display:flex;
   margin:0 10vh;
@@ -5,7 +7,6 @@
 
 .brand-image{
   margin:50px 0 10px 0;
-  border:1px solid gray;
 }
 
 .brand-text{
@@ -36,4 +37,6 @@
   padding:20px;
   width:258px;
   height:380px;
+}
+
 }

@@ -60,7 +60,7 @@
 <div class="cart-buy">
 <p class="cart-price">合計：<%= number_to_currency(sum, locale:"jp") %></p>
  <%= link_to orders_path, class: 'return-btn' do  %> 
-    <p class="return-buy-move">購入画面へ進む</p>
+ <button class="return-buy-move">購入画面へ進む</button>
  <% end %> 
 </div>
 
@@ -68,4 +68,3 @@
 
 </div>
 <%= render "shared/footer" %>
-

@@ -1,3 +1,5 @@
+@media(min-width: 480px){
+
 .shopping-cart{
   font-family: serif;
   margin:50px 0;
@@ -93,9 +95,15 @@ display: flex;
 
 }
 
+input[class="quantity"]{
+  height:25px;
+  }
+
 input[class="change"]{
   font-size: 12px;
   margin:5px 0 0 5px;
+  height:25px;
+
 }
 
 .back-btn:hover{
@@ -115,54 +123,39 @@ p.back-btn{
 
 input[class="cart-destroy"]{
   font-size: 12px;
-  margin:0 0 15px 975px ;
+  margin:0 0 15px 68vw ;
 }
 
 .cart-buy{
-  display:flex;
-  flex-direction: column;
-  align-items:end;
-  
+  text-align: end;
 }
-
-.buy-move{
-  background: #fff;
-  border: 1px solid #228bc8;
-  box-sizing: border-box;
-  width: 100%;
-  height: 50px;
-  padding: 0 6% 0 12%;
-  color: #228bc8;
-  font-size: 16px;
-  text-align: left;
-  text-decoration: none;
-  position: relative;
-  transition-duration: 0.2s;
-}
-
 p.cart-price{
-  margin-left: 20px;
+
   font-family: serif;
   font-size: 18px;
   font-weight: bold;
+
   /* text-align: right; */
 }
 
-p.return-buy-move{
-  display: inline-block;
-	position: relative;
+.return-btn{
+  text-align: end;
+}
+
+button.return-buy-move{
 	width: 200px;
 	padding: 0.8em;
 	text-decoration: none;
-	color: #1B1B1B;
-  background-color: #efefef;
-	border-radius: 30px;
-	border:1px solid #1B1B1B;
   margin:5px 0 30px;
+ 
+
+
 }
 
 p.return-buy-move:hover {
   cursor: pointer;
   text-decoration: none;
   background-color:#dddddd;
+}
+
 }

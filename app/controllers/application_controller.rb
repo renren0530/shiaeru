@@ -26,8 +26,6 @@ class ApplicationController < ActionController::Base
         request.variant = :mobile
     end
   end
- 
-
 
 
 end
