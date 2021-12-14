@@ -29,7 +29,7 @@ class BuysController < ApplicationController
       @order = Order.order(updated_at: :desc).limit(1)
       order_return = OrderReturn.new(order_id: @order.ids[0], return_id: @buy.return_id, quantity: @buy.quantity)
       order_return.save
-      redirect_to root_path
+      redirect_to buys_complete_path
     else
       render :show
     end

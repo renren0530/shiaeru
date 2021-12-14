@@ -37,6 +37,8 @@ end
   post '/add_item' => 'carts#add_item'
   post '/update_item' => 'carts#update_item'
   delete '/delete_item' => 'carts#delete_item'
+  get '/buys_complete' => 'buys#complete'
+
 
   resources :brands
 

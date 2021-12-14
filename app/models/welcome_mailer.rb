@@ -1,0 +1,2 @@
+class WelcomeMailer < ApplicationRecord
+end

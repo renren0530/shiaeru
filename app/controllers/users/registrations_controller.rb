@@ -16,7 +16,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
       params[:user][:password] = pass
       params[:user][:password_confirmation] = pass
     end
+
     super
+     WelcomeMailer.send_when_signup(params[:user][:email],params[:user][:nickname]).deliver_now
   end
 
   # GET /resource/edit

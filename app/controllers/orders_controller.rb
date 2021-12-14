@@ -22,7 +22,7 @@ class OrdersController < ApplicationController
       end
 
       @cart.destroy
-      redirect_to root_path
+      redirect_to buys_complete_path
     else
       render :index
     end
