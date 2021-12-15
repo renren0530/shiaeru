@@ -21,7 +21,7 @@
  
 ・一般ユーザー<br>
 　email : earth_rr@i.softbank.jp<br>
-　password : Zoo1Zoo3
+　password : Zoo1Zoo3<br>
  ID：admin　PASS：2222
 
 # 利用方法
