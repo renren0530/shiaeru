@@ -4,7 +4,9 @@
 <div class="brand-text", style="white-space:pre-wrap;"><%= @brand.brand_info %></div>
 </div>
 
+<% if @brand.brand_name != "募集中" %>
 <h2 class="brand-detail"><%= "商品一覧" %></h2>
+<% end %>
 <div class="brand-return">
 <% @returns.each do |returns| %>
 <% if returns.brand_kinds_id == @brand.id  %>
