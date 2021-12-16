@@ -1,0 +1,2 @@
+class BuyMailer < ApplicationRecord
+end

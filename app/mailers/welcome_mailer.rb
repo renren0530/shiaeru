@@ -1,7 +1,6 @@
 class WelcomeMailer < ApplicationMailer
 
   def send_when_signup(email,nickname)
-    
-    mail to: ENV['GOOGLE_MAIL_ADDRESS'], subject: '【お問い合わせ】'
+    mail to: email, subject: '会員登録完了'
   end
 end

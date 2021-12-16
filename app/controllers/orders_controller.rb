@@ -20,7 +20,8 @@ class OrdersController < ApplicationController
                                        quantity: cart_return.quantity)
         order_return.save
       end
-
+      @email = current_user.email
+      BuyMailer.buy_mail(@cart,@order,@order_residence).deliver_now
       @cart.destroy
       redirect_to buys_complete_path
     else
