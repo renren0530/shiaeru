@@ -5,4 +5,12 @@ class BuyMailer < ApplicationMailer
     @order_residense = order_residense
     mail to: email, subject: '購入完了'
   end
+
+  def order_mail(email, cart, order, order_residense)
+    @cart = cart
+    @order = order
+    @order_residense = order_residense
+    mail to: email, subject: '購入完了'
+  end
+
 end
