@@ -7,20 +7,27 @@
     </h1>
 
     <% sum = 0 %>
- 
+
     <% @cart.cart_returns.each do |cart_return| %>
-
-    <%# 購入内容の表示 %>
-      <%= image_tag cart_return.return.images[0], class: 'buy-item-img' %>
-      <div class='buy-item-right-content'>
-        <h2 class='buy-item-text'><%= cart_return.return.return_name %> </h2>
-        <p class='item-price-quantity'>個数：<%= cart_return.quantity %></p>
-        <p class='item-price-text'><%= number_to_currency(cart_return.return.return_price.to_s, locale:"jp") %></p>
-      </div>
-
-      <% price = cart_return.return.return_price.to_i %>
+  <% price = cart_return.return.return_price.to_i %>
       <% quantity = cart_return.quantity.to_i %>
       <% sum = price*quantity + sum %>
+    <%# 購入内容の表示 %>
+      <div class="order-product">
+        <%= image_tag cart_return.return.images[0], class: 'buy-item-img' %>
+        <div class='buy-item-right-content'>
+          <h2 class='buy-item-text'><%= cart_return.return.return_name %> </h2>
+
+          <div class="quantity-price">
+            <p class='item-price-text'><%= number_to_currency(cart_return.return.return_price.to_s, locale:"jp") %></p>
+            <p class='item-price-quantity'>×<%= cart_return.quantity %>個</p>
+          </div>
+          <p class='item-price-text'>小計：<%= number_to_currency(sum.to_s, locale:"jp") %></p>
+
+        </div>
+      </div>
+
+     
 
     
     <%# /購入内容の表示 %>

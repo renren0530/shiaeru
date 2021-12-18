@@ -136,7 +136,7 @@ h3.project-list{
   display:flex;
   flex-wrap: wrap;
   justify-content: start;
-  margin:0 10vh 20px;
+  margin:0 5vw 20px;
 }
 
 /* _item */
@@ -146,7 +146,7 @@ h3.project-list{
   border-top: solid 5px gray;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
   border-radius: 10px;
-  width:278px;
+  width:19vw;
   height:270px;
   margin:0 0.5vw 1vw;
   padding:10px;

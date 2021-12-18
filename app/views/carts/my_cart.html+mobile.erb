@@ -1,0 +1,66 @@
+<%= render "shared/header" %>
+<% if @cart.blank? %>
+  <h1 class="text-center">カートに商品はありません</h1>
+<% else %>
+<h1 class="shopping-cart">ショッピングカート</h1>
+<div class="carts">
+
+<% sum = 0 %>
+<% @cart.cart_returns.each do |cart_return| %>
+
+<div class="cart-main">
+
+<div class="cart-btn">
+
+<div class="product-name">
+<%= link_to(item_return_id_path(cart_return.return.item_id, cart_return.return_id), class: 'product-btn') do  %> 
+<%= image_tag cart_return.return.images[0], width:"150", class:"cart-image" %>   
+<% end %>
+</div>
+
+<div class="product-cart">
+  <%= link_to(item_return_id_path(cart_return.return.item_id, cart_return.return_id), class: 'back-btn') do  %>
+  <p class="cart-name"><%= cart_return.return.return_name %></p>
+    <% end %> 
+    <%= form_with url: update_item_path, class:"cart-quantity", method: :post, local: true do |f| %>
+            <%= hidden_field_tag :cart_return_id, cart_return.id %>
+            <span class="pruduct-quantity">個数：</span>
+            <%= f.number_field :quantity, value: cart_return.quantity, class:"quantity" %>
+            <%= f.submit "変更", class:"change"%>
+        <% end %>
+<p class="cart-value">価格: <%= number_to_currency(cart_return.return.return_price.to_i, locale:"jp") %></p>
+<p class="cart-details">(寄付額: <%= number_to_currency(cart_return.return.return_donate.to_i, locale:"jp") %>)</p>
+
+</div>
+
+
+</div>
+
+
+  
+      <%= form_with url: delete_item_path, class:"quantity-destroy", method: :delete, local: true do |f| %>
+        <%= hidden_field_tag :return_id, cart_return.return_id %>
+        <%= f.submit "削除する", class: "cart-destroy" %>
+      <% end %>
+  
+ 
+  
+
+<% price = cart_return.return.return_price.to_i %>
+<% quantity = cart_return.quantity.to_i %>
+<% sum = price*quantity + sum %>
+
+</div>
+<% end %>
+
+<div class="cart-buy">
+<p class="cart-price">合計：<%= number_to_currency(sum, locale:"jp") %></p>
+ <%= link_to orders_path, class: 'return-btn' do  %> 
+ <button class="return-buy-move">購入画面へ進む</button>
+ <% end %> 
+</div>
+
+<% end %>
+
+</div>
+<%= render "shared/footer" %>

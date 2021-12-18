@@ -23,14 +23,13 @@
   }
   
   /* 購入内容の表示 */
-  .buy-item-info {
-    height: 150px;
-    border-bottom: 2px solid #f5f5f5;
+  .order-product{
     display: flex;
-    align-items: center;
     justify-content: center;
+    border-bottom: 1px solid #f5f5f5;
+    padding:10px;
   }
-  
+
   .buy-item-img {
     margin-right: 20px;
     height: 200px;
@@ -46,20 +45,25 @@
     font-size: 20px;
     font-family: serif;
   }
+
+  .quantity-price{
+    display:flex;
+  }
   
-  p.item-price-quantity {
+  p.item-price-text {
     font-size: 20px;
     font-family: serif;
     margin-left: 20px;
     font-weight: bold;
     margin:0 0 15px 20px;
   }
-  p.item-price-text {
+
+  p.item-price-quantity {
     font-size: 20px;
     font-family: serif;
     margin-left: 20px;
     font-weight: bold;
-    margin:0 0 30px 20px;
+    margin:0 0 15px 0;
   }
   
   
@@ -176,7 +180,7 @@
     -webkit-appearance: none;
     background: #ea352d;
     border-radius: 0;
-
+    color: #fff;
     width: 100%;    
     line-height: 48px;
     font-size: 14px;

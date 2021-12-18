@@ -1,7 +1,7 @@
 @media(max-width: 480px){
 
 .title-contents{
-  opacity: 0.9;
+  opacity: 1;
   background-repeat: no-repeat;
   background-position:center;
   height:140px;
@@ -21,7 +21,6 @@ h1.service-title1{
   text-shadow: 0px 0px 1px #000,
   4px 4px 2px rgba(0,0,0,0.5);
   margin:20px 0 0 0;
-
 }
 
 h1.service-title2{
@@ -48,7 +47,7 @@ h1.service-title3{
   font-weight: 800;
   text-align: center;
   font-family:serif;
-  font-size: 12px;
+  font-size: 15px;
   margin:30px auto;
 
 }
@@ -123,7 +122,7 @@ h3.project-list{
   font-weight: 800;
   text-align: center;
   font-family:serif;
-  font-size: 12px;
+  font-size: 15px;
   margin:30px auto;
 }
 
@@ -152,9 +151,9 @@ h3.project-list{
   border-top: solid 5px gray;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
   border-radius: 10px;
-  width:39%;
+  width:40vw;
   height:200px;
-  margin:0 2vw 3vw;
+  margin:0 1vw 2vw;
   padding:10px;
   font-size: 15px;
   font-weight: bold;

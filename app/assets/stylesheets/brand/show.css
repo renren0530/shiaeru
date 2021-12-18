@@ -23,7 +23,7 @@
 .brand-return{
   display:flex;
   flex-wrap: wrap;
-  margin:0 10vh 50px;
+  margin:0 5vw 50px;
 }
 
 
@@ -33,9 +33,9 @@
   border-top: solid 5px gray;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
   border-radius: 10px;
-  margin:15px 7px 15px 7px;
-  padding:20px;
-  width:258px;
+  margin:0 0.5vw 1vw;
+  padding:1vw;
+  width:18.7vw;
   height:380px;
 }
 

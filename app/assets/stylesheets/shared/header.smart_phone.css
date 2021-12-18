@@ -13,6 +13,13 @@
      display: flex;
      margin:0;
   }
+
+  .title-logo{
+    display: flex;
+    text-decoration: none;
+    color:black;
+    font-family: serif;
+  }
   
   img.title-icon {
    width:6vh;

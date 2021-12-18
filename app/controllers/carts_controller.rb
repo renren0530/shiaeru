@@ -26,6 +26,10 @@ class CartsController < ApplicationController
   # アイテムの更新
   def update_item
     @cart_return = CartReturn.find(params[:cart_return_id])
+    if params[:quantity] == ""
+      redirect_to my_cart_path
+      return
+    end
     @cart_return.update(quantity: params[:quantity])
     @cart_return.delete if @cart_return.quantity == 0
     redirect_to my_cart_path

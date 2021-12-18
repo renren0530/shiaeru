@@ -40,18 +40,25 @@ p.return-donate{
   margin:0 0 15px 0;
 }
 
-input[type="number"]{
-  font-size: 10px;
+.return-quantity{
+  display:flex;
+  align-items: center;
+  width:100%;
+}
+
+span.quantities{
   font-weight: bold;
-  font-family: serif;
-  width:35px;
-  margin:0;
+}
+
+input[class="return-quantities"]{
+  width:15%;
+  height:40px;
 }
 
 .return-buy{
+ -webkit-appearance: none;
   font-size: 15px;
   font-weight: bold;
-  font-family: serif;
   display: inline-block;
 	position: relative;
 	width: 200px;
@@ -93,7 +100,5 @@ font-family: serif;
   font-family: serif;
   margin:0;
 }
-
-
 
 }

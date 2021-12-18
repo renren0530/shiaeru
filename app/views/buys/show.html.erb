@@ -5,16 +5,23 @@
     <h1 class='transaction-title-text'>
       購入内容の確認
     </h1>
- 
+     <% price = @return.return_price.to_i %>
+          <% quantity = @buy.quantity.to_i %>
+          <% sum = price*quantity %>
     <%# 購入内容の表示 %>
+      <div class="order-product">
       <%= image_tag @return.images[0], class: 'buy-item-img' %>
       <div class='buy-item-right-content'>
         <h2 class='buy-item-text'><%= @return.return_name %></h2>
-        <p class='item-price-quantity'>個数：<%= @buy.quantity %></p>
+          <div class="quantity-price">
         <p class='item-price-text'><%= number_to_currency(@return.return_price.to_s, locale:"jp") %></p>
-           <div class='buy-item-quantity'>
+        <p class='item-price-quantity'>×<%= @buy.quantity %>個</p>
         </div>
-      </div>  
+        <p class='item-price-text'>小計：<%= number_to_currency(sum.to_s, locale:"jp") %></p>
+
+      </div> 
+      </div>
+
     <%# /購入内容の表示 %>
   
 
@@ -25,9 +32,6 @@
         支払金額
       </h1>
       <p class='item-payment-price'>
-          <% price = @return.return_price.to_i %>
-          <% quantity = @buy.quantity.to_i %>
-          <% sum = price*quantity %>
       <%= number_to_currency(sum.to_s, locale:"jp") %>
 
       </p>

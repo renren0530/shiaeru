@@ -52,6 +52,10 @@ p.input[type="number"]{
   margin-bottom:0;
 }
 
+p.quantities{
+  font-weight: bold;
+}
+
 .return-btn{
   text-decoration: none;
   color:#333;
