@@ -1,0 +1,46 @@
+<span style="white-space: pre-wrap;">
+<%= @nickname %> 様<br>
+この度は、しあえるプロジェクトに支援いただきありがとうございます。
+
+準備が完了次第、商品を発送させていただきます。
+
+[商品詳細]
+
+<% sum = 0 %>
+<% @cart.cart_returns.each do |cart_return| %>
+<% price = cart_return.return.return_price.to_i %>
+<% quantity = cart_return.quantity.to_i %>
+<% sum = price*quantity + sum %>
+<% subtotal = price*quantity %>
+商品名：<%= cart_return.return.return_name %> 
+
+価格：<%= number_to_currency(cart_return.return.return_price.to_s, locale:"jp") %>
+個数：<%= cart_return.quantity %>
+小計：<%= number_to_currency(subtotal.to_s, locale:"jp") %>
+
+<% end %>
+合計：<%= number_to_currency(sum.to_s, locale:"jp") %>
+
+
+[配送先住所]
+
+郵便番号：<%= @order_residense.postal_code %>
+市町村：<%= @order_residense.city %>
+番地：<%= @order_residense.addresses %>
+建物名：<%= @order_residense.building %>
+電話番号：：<%= @order_residense.phone_number %>
+
+※本メールはお客様にご入力いただいたメールアドレスあてに発信しているため、入力ミスなどの理由によりまったく別の方にメールが届く場合があります。
+
+もし本メールに心当たりがない場合は、お手数ですが、破棄していただけますようお願いします。
+
+本メールにご返信いただきましても、対応いたしかねます。
+
+お問い合わせは下記URLよりお願いいたします。
+
+■ご意見・ご質問は、こちらからお願いします。
+
+https://shiaeru.herokuapp.com/inquiries/new
+
+株式会社ソネッティーク
+</span>

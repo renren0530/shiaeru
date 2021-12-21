@@ -6,6 +6,9 @@ class OrdersController < ApplicationController
     # @return = Return.find(params[:return_id])
     @order_residence = OrderResidence.new
     @cart = current_user.cart
+    if @cart.blank?
+    redirect_to root_path
+    end
   end
 
   def create
@@ -21,7 +24,7 @@ class OrdersController < ApplicationController
         order_return.save
       end
       @email = current_user.email
-      BuyMailer.order_mail(@email,@cart,@order,@order_residence).deliver_now
+      BuyMailer.order_mail(@email, @cart, @order, @order_residence, current_user.nickname).deliver_now
       @cart.destroy
       redirect_to buys_complete_path
     else

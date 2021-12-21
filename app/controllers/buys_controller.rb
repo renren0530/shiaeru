@@ -31,7 +31,7 @@ class BuysController < ApplicationController
       order_return = OrderReturn.new(order_id: @order.ids[0], return_id: @buy.return_id, quantity: @buy.quantity)
       order_return.save
       @email = current_user.email
-      BuyMailer.buy_mail(@email,@buy,@return,@order_residence).deliver_now
+      BuyMailer.buy_mail(@email, @buy, @return, @order_residence, current_user.nickname).deliver_now
       redirect_to buys_complete_path
     else
       render :show

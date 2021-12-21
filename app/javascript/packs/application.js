@@ -18,6 +18,8 @@ require("../preview")
 require("../order")
 require("../cart")
 require("../header")
+require("../shiaeru-image")
+
 
 
 
