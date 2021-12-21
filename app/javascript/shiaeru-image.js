@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', function(){
 
 var imgList =[
-  "assets/items/しあえる (5).png",
-  "assets/items/しあえるプロジェクト.png",
+  "assets/items/top_image4.jpg",
   "assets/items/top_image3.jpg",
   "assets/items/top_image2.jpg",
+  "assets/items/top_image.jpg",
 ]   
 
 

@@ -210,4 +210,59 @@ span.purchase-btn-texts{
   margin-left:90px;
 }
 
+
+.slider {
+  position: relative;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  width: 100%;
+  height: 200px;
+  margin:10px auto;
+  padding:0;
+}
+
+.arrow{
+background-color: lightgray;
+font-weight: bold;
+color:white;
+ font-size: 20px;
+  margin:auto 0;
+  width:8%;
+  height:15%;
+  padding:0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ul.slider-inner {
+  position: relative;
+  margin:0;
+  width: 92%;
+  height: 100%;
+  list-style: none;
+  padding:0;
+}
+
+ul.slider-inner li {
+  width:100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.slider .slider-inner li{
+ position: absolute;
+}
+
+.slider .slider-inner li.show {
+  opacity: 1;
+  width:100%;
+}
+
+li img{
+  width:100%;
+  height:100%;
+}
+
 }
