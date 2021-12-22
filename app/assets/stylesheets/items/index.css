@@ -44,7 +44,7 @@ h1.service-title3{
   text-align: center;
   font-family:serif;
   margin:20px auto 50px;
-  font-size: 20px;
+  font-size: 25px;
 
 }
 
@@ -66,8 +66,8 @@ h1.service-title3{
   border-radius: 10px;
   border-top: solid 5px gray;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
-  width:800px;
-  height:300px;
+  width:900px;
+  height:330px;
   margin:auto;
   padding:10px;
 }
@@ -82,12 +82,12 @@ p.shiaeru-detail{
   text-align: center;
   font-weight: bold;
   font-family:serif;
-  font-size: 19px;
+  font-size: 20px;
   margin: 5px 0 10px 0 ;
 }
 
 p.sub-title{
-font-size: 15px;
+font-size: 18px;
 font-weight: bold;
 font-family:serif;
 
@@ -98,14 +98,14 @@ background-color: #44a73c;
 text-decoration: none;
 border-radius: 5px;
 padding:10px;
-width:110px;
+width:150px;
 text-align: center;
 margin:10px auto 0;
 }
 
 p.shiaeru-text{
   color:#fff;
-  font-size: 13px;
+  font-size: 20px;
   font-weight: bold;
   font-family: serif;
   margin:0;
@@ -118,7 +118,7 @@ h3.project-list{
   text-align: center;
   font-family:serif;
   margin:50px auto;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .project-list:before{
@@ -243,6 +243,7 @@ ul.slider-inner li {
   width:100%;
   height: 100%;
   opacity: 0;
+  transition:all 1s ease-in-out;
 }
 
 .slider .slider-inner li{
@@ -252,6 +253,9 @@ ul.slider-inner li {
 .slider .slider-inner li.show {
   opacity: 1;
   width:100%;
+
+
+
 }
 
 li img{
