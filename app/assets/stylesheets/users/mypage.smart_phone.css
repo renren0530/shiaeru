@@ -5,7 +5,7 @@
   font-family: serif;
   margin:30px 0;
   text-align: center;
-  font-size: 15px;
+  font-size: 20px;
 }
 
 .history{
@@ -37,25 +37,25 @@ p.buy_details{
   margin:0 0 10px 0;
   font-weight: bold;
   font-family: serif;
-  font-size: 10px;
+  font-size: 16px;
 
 }
 
 p.buy_detail{
-  margin:0 5px 0 0;
+  margin:0;
   font-weight: bold;
   font-family: serif;
-  font-size: 10px;
+  font-size: 16px;
 }
 
 .buy-history{
-  display:flex;
+ display: flex;
 }
 
 .history-price{
   font-family: serif;
   text-align: end;
-  font-size: 12px;
+  font-size: 20px;
 }
 
 }

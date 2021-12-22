@@ -19,16 +19,16 @@
      <p class="buy_details"><%= "リターン: #{order_return.return.return_name}" %></p>
 
     <div class="buy-history">
-     <p class="buy_detail"><%= "個数：#{order_return.quantity}" %></p>
-
-     <p class="buy_detail">
-     <%= "寄付額：#{number_to_currency((order_return.return.return_donate.to_i)*(order_return.quantity.to_i), locale:"jp")}" %></p>
-
+     <p class="buy_detail"><%= "価格：#{number_to_currency((order_return.return.return_price.to_i), locale:"jp")}" %> ×</p>
+     <p class="buy_detail"><%= order_return.quantity %>個</p>
+    </div>
      <p class="buy_detail"><%= "購入金額：#{number_to_currency((order_return.return.return_price.to_i)*(order_return.quantity.to_i), locale:"jp")}" %></p>
+     <p class="buy_detail">
+     <%= "(寄付額：#{number_to_currency((order_return.return.return_donate.to_i)*(order_return.quantity.to_i), locale:"jp")})" %></p>
+
      <% sum_price = sum_price+(order_return.return.return_price.to_i*order_return.quantity.to_i) %>
      <% sum_donate = sum_donate+(order_return.return.return_donate.to_i*order_return.quantity.to_i) %>
      <% sum = sum_price*sum_donate %>
-    </div>
 
     </div>
 
@@ -37,8 +37,8 @@
 <% end %>
 
 </div>
-<h2 class="history-price"><%= "合計寄付額：#{number_to_currency(sum_donate, locale:"jp")}" %></h2>
 <h2 class="history-price"><%= "合計購入金額：#{number_to_currency(sum_price, locale:"jp")}" %></h2>
+<h2 class="history-price"><%= "(合計寄付額：#{number_to_currency(sum_donate, locale:"jp")})" %></h2>
 </div>
 
 

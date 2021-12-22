@@ -32,6 +32,7 @@
     font-weight: bold;
     font-family: serif;
     margin:2.2vh 0 0 0;
+    font-size: 20px;
   }
 
   .hunber{
@@ -52,8 +53,8 @@
     display: block;
     position: absolute;
     width   : 8vw;
-    height  : 2px ;
-    background-color: gray;
+    height  : 1px ;
+    background-color: black;
     border: 0.5px solid black;
 
   }

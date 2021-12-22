@@ -39,7 +39,7 @@ p.buy_details{
 }
 
 p.buy_detail{
-  margin:0 20px 0 0;
+  margin:0 0 10px 0;
   font-weight: bold;
   font-family: serif;
 
@@ -52,6 +52,6 @@ p.buy_detail{
 .history-price{
   font-family: serif;
   text-align: end;
-  font-size: 18px;
+  font-size: 20px;
 }
 }
