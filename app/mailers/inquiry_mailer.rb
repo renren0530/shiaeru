@@ -3,6 +3,6 @@ class InquiryMailer < ApplicationMailer
     @inquiry = inquiry
     
     mail to: "info@shiaeru.net", subject: '【お問い合わせ】',
-         from: '"しあえる" <noreply@yoursite.com>'
+         from: '"しあえる" <zoo.zoo.ren@gmail.com>'
   end
 end
