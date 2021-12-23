@@ -96,7 +96,6 @@ font-family:serif;
 .shiaeru-btn{
 background-color: #44a73c;
 text-decoration: none;
-border-radius: 5px;
 padding:10px;
 width:150px;
 text-align: center;
@@ -169,6 +168,7 @@ h3.project-list{
 
 p.item-info{
   padding:0;
+  font-size: 16px;
 }
 
 .orner-edit-btn{

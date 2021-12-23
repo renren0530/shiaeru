@@ -12,15 +12,6 @@
 
        <div class="hunber">
 
-       <div class="btn-trigger" id="btn-gnavi">
-         <span></span>
-         <span></span>
-         <span></span>
-       </div>
-
-
-        
-
          <ul class="nav__wrapper" id="navi">
            <% if user_signed_in? %> 
            <li class="nav__item"><%= link_to "買い物かご", my_cart_path, class:"header_page" %></li>
@@ -34,7 +25,13 @@
            <li class="nav__item"><%= link_to 'お問い合わせ', new_inquiry_path, class:"header_page" %></li>   
          </ul> 
 
-         </div>
+        <div class="btn-trigger" id="btn-gnavi">
+         <span></span>
+         <span></span>
+         <span></span>
+       </div>
+
+       </div>
 
 
       </div>
