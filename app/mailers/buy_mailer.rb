@@ -4,7 +4,7 @@ class BuyMailer < ApplicationMailer
     @return = returns
     @order_residense = order_residense
     @nickname = nickname
-    mail to: email, subject: '購入完了'
+    mail to: email, subject: '購入完了', from: '"しあえる" <noreply@yoursite.com>'
   end
 
   def order_mail(email, cart, order, order_residense, nickname)
@@ -12,7 +12,7 @@ class BuyMailer < ApplicationMailer
     @order = order
     @order_residense = order_residense
     @nickname = nickname
-    mail to: email, subject: '購入完了'
+    mail to: email, subject: '購入完了',   from: '"しあえる" <noreply@yoursite.com>'
   end
 
 end

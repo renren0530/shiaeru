@@ -5,7 +5,6 @@
 準備が完了次第、商品を発送させていただきます。
 
 [商品詳細]
-
 <% price = @return.return_price.to_i %>
 <% quantity = @buy.quantity.to_i %>
 <% sum = price*quantity %>
@@ -17,7 +16,6 @@
 
 
 [配送先住所]
-
 郵便番号：<%= @order_residense.postal_code %>
 市町村：<%= @order_residense.city %>
 番地：<%= @order_residense.addresses %>
