@@ -1,0 +1,20 @@
+.order-complete{
+  font-family: serif;
+  margin:50p
+  text-align: center;
+}
+
+.password-input{
+  text-align: center;
+}
+
+.password_background{
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+}
+
+.back{
+  text-align: center;
+  margin:20px 0;
+}

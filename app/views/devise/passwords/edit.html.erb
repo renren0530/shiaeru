@@ -1,14 +1,14 @@
+<%= render "shared/header" %>
+
 <%= devise_error_messages! %>
 <div class="title_background">
-  <div class="page-header">
-    <h2>パスワード再設定</h2>
-  </div>
-  <p>パスワードを再設定します。<br>
-     新しいパスワードを入力してください。
-  </p>
+<h1 class="order-complete">パスワード再設定</h1>
+
+  <p class="password-input">パスワードを再設定します。</p>
 </div>
-<div class="registrations_background">
-  <div class="registrations">
+
+<div class="password_background">
+
     <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
       <%= f.hidden_field :reset_password_token %>
 
@@ -29,6 +29,9 @@
         <p class="in_field"><%= f.submit "パスワード再設定",:class=>"form_login_btn col-xs-12" %></p>
       </div>
     <% end %>
-  </div>
+
 </div>
-<%= link_to 'トップページへ戻る', "/" %>
+<div class="back"><%= link_to 'トップページへ戻る', "/" %></div>
+
+
+<%= render "shared/footer" %>

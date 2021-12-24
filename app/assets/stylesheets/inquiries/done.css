@@ -1,0 +1,29 @@
+.password-forget{
+  font-family: serif;
+  margin:50px 0 20px;
+  text-align: center;
+}
+
+.email-input{
+  text-align: center;
+}
+
+.pass_new_background{
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+}
+
+form[class="new_user"]{
+  margin:0 auto;
+}
+
+.in_field{
+  margin:5px 0 10px;
+}
+
+.back{
+  text-align: center;
+  margin:20px 0;
+}
+
