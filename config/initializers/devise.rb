@@ -25,7 +25,7 @@ Devise.setup do |config|
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
   # メールを送信するアドレス
-  config.mailer_sender = ENV["GOOGLE_MAIL_ADDRESS"]
+  config.mailer_sender = '"しあえる" <info@shiaeru.net>'
   # パスワード再設定するためのキーカラム。
   config.reset_password_keys = [:email]
 

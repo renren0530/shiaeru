@@ -11,7 +11,7 @@
 
 <div class="cart-subtitle">
 <span class="cart-detailss">個数</span>
-<span class="cart-detailss">寄付額</span>
+<%# <span class="cart-detailss">寄付額</span> %>
 <span class="cart-values">価格</span>
 </div>
 
@@ -39,7 +39,15 @@
           <span><%= f.number_field :quantity, value: cart_return.quantity, class:"quantity" %></span>
           <span><%= f.submit "更新", class:"change"%></span>
     <% end %> 
+
+    <%
+=begin  
+%>
 <span class="cart-details"><%= number_to_currency(cart_return.return.return_donate.to_i, locale:"jp") %></span>
+<%
+=end 
+%>
+
 <span class="cart-value"><%= number_to_currency(cart_return.return.return_price.to_i, locale:"jp") %></span>
 </div>
 
