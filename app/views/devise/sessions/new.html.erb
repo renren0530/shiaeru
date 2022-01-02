@@ -30,14 +30,11 @@
   
 <% end %>
 
-<%
-=begin
-%>
+
 <span class="sns"><%= link_to 'Facebookでログイン', user_facebook_omniauth_authorize_path, method: :post, class:"sns-registration"%></span>
 <span class="sns"><%= link_to 'Googleでログイン', user_google_oauth2_omniauth_authorize_path, method: :post, class:"sns-registration" %></span>
-<%
-=end
-%>
+
+
 <span class="password-forget"><%= render "devise/shared/links"%></span>
 <span><%= link_to 'トップページへ戻る', "/", class:"top-page-btn" %></span>
 
