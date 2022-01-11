@@ -5,13 +5,9 @@
 <%= image_tag @return.images[0], class: "returns-image" %> 
 <p class="item-price">¥<%= number_to_currency(@return.return_price.to_s, locale:"jp") %></p>
 
-<%
-=begin  
-%>
+
 <p class="donate">(自然保護団体への寄付額：<%= number_to_currency(@return.return_donate.to_s, locale:"jp") %>)</p>
-<%
-=end
-%>
+
 
 <p class="returns-text">支援する</p>
 <object>

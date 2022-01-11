@@ -7,6 +7,26 @@
 
 .brand-image{
   margin:50px 0 10px 0;
+  position: relative;
+  
+}
+
+.showsample {
+  position: absolute;
+  top:40%;
+  width: 100%;
+  height:60px;
+  background-color: lightgray;
+  color:blue;
+  transform: skewY(-10deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.7;
+}
+
+.showsample span{
+  font-size: 40px;
 }
 
 .brand-text{

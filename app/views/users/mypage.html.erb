@@ -25,13 +25,9 @@
      <p class="buy_detail"><%= "購入金額：#{number_to_currency((order_return.return.return_price.to_i)*(order_return.quantity.to_i), locale:"jp")}" %></p>
      <p class="buy_detail">
 
-<%
-=begin  
-%>
+
      <%= "(寄付額：#{number_to_currency((order_return.return.return_donate.to_i)*(order_return.quantity.to_i), locale:"jp")})" %></p>
-<%
-=end 
-%>
+
 
      <% sum_price = sum_price+(order_return.return.return_price.to_i*order_return.quantity.to_i) %>
      <% sum_donate = sum_donate+(order_return.return.return_donate.to_i*order_return.quantity.to_i) %>
@@ -46,13 +42,9 @@
 </div>
 <h2 class="history-price"><%= "合計購入金額：#{number_to_currency(sum_price, locale:"jp")}" %></h2>
 
-<%
-=begin  
-%>
+
 <h2 class="history-price"><%= "(合計寄付額：#{number_to_currency(sum_donate, locale:"jp")})" %></h2>
-<%
-=end  
-%>
+
 
 </div>
 

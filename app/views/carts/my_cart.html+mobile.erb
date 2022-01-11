@@ -30,14 +30,10 @@
         <% end %>
 <p class="cart-value">価格: <%= number_to_currency(cart_return.return.return_price.to_i, locale:"jp") %></p>
 
-    <%
-=begin  
-%>
+
 <p class="cart-details">(寄付額: <%= number_to_currency(cart_return.return.return_donate.to_i, locale:"jp") %>)</p>
 
-    <%
-=end  
-%>
+
 
 </div>
 

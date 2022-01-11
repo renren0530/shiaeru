@@ -9,10 +9,29 @@
 
 .project-image{
 margin:20px 10vh 20px;
+position:relative;
 }
 
 .project-img{
   width: 45vw;
+}
+
+.projectsample {
+  position: absolute;
+  top:35%;
+  width: 45vw;
+  height:60px;
+  background-color: lightgray;
+  color:blue;
+  transform: skewY(-10deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.7;
+}
+
+.projectsample span{
+  font-size: 40px;
 }
 
 .project-content{

@@ -12,13 +12,8 @@
     <p class="return-text"><%= @return.return_name %></p>
     <p class="return-price">¥ <%= number_to_currency(@return.return_price.to_s, locale:"jp") %> (税込)</p>
 
-    <%
-=begin  
-%>
     <p class="return-donate">(自然保護団体への寄付額：¥<%= number_to_currency(@return.return_donate.to_s, locale:"jp") %>)</p>
-    <%
-=end  
-%>
+
     <%= form_with url: add_item_path, method: :post, local: true do |f| %>
       <%= hidden_field_tag :return_id, @return.id %>
       <span>個数 <%= f.number_field :quantity, value: 1, name:"quantity" %></span>　

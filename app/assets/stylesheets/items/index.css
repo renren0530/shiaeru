@@ -152,6 +152,8 @@ h3.project-list{
   font-size: 15px;
   font-weight: bold;
   font-family: serif;
+  position: relative;
+
 }
 
 .item_list{
@@ -164,6 +166,24 @@ h3.project-list{
 .item-img {
   height:200px;
   border-radius: 10px;
+}
+
+.sample {
+  position: absolute;
+  top: 30%;
+  width: 19vw;
+  height:60px;
+  background-color: lightgray;
+  color:blue;
+  transform: skewY(-10deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.7;
+}
+
+.sample span{
+  font-size: 25px;
 }
 
 p.item-info{

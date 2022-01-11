@@ -13,11 +13,30 @@
   
   .project-image{
   margin:20px 0 20px;
+  position:relative;
   }
   
   .project-img{
     width: 90vw;
     margin:0 auto;
+  }
+
+  .projectsample {
+    position: absolute;
+    top:30%;
+    width: 90vw;
+    height:60px;
+    background-color: lightgray;
+    color:blue;
+    transform: skewY(-10deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.7;
+  }
+  
+  .projectsample span{
+    font-size: 40px;
   }
  
   
