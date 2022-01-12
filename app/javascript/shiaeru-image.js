@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', function(){
 
 var imgList =[
-  "assets/items/top_image4.jpg",
+  "assets/items/top_image0.jpg",
   "assets/items/top_image3.jpg",
-  "assets/items/top_image2.jpg",
+  "assets/items/top_image4.jpg",
   "assets/items/top_image.jpg",
 ]   
 
