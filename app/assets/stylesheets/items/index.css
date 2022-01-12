@@ -1,5 +1,80 @@
 @media(min-width: 1180px){
 
+  .slider {
+    position: relative;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    width: 100%;
+    height: 600px;
+    margin:0 auto;
+    padding:0;
+  }
+  
+  .arrow{
+  background-color: lightgray;
+  font-weight: bold;
+  color:white;
+   font-size: 20px;
+    margin:auto 0;
+    width:0%;
+    height:15%;
+    padding:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  ul.slider-inner {
+    position: relative;
+    margin:0;
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    padding:0;
+  }
+  
+  ul.slider-inner li {
+    width:100%;
+    height: 100%;
+    opacity: 0;
+    transition:all 1s ease-in-out;
+  }
+  
+  .slider .slider-inner li{
+   position: absolute;
+  }
+  
+  .slider .slider-inner li.show {
+    opacity: 1;
+    width:100%;
+  }
+  
+  li img{
+    width:100%;
+    height:100%;
+  }
+  
+  .nav-btn{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .nav{
+    padding:0;
+    margin:20px 0;
+  }
+  
+  .nav-btn .nav li {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    border-radius: 15px;
+    background: lightgray;
+    cursor: pointer;
+  }
 
 .title-contents{
   opacity: 0.9;
@@ -224,84 +299,6 @@ span.purchase-btn-texts{
 
 
 
-.slider {
-  position: relative;
-  display: flex;
-  align-items:center;
-  justify-content: center;
-  width: 100%;
-  height: 400px;
-  margin:0 auto;
-  padding:0;
-}
 
-.arrow{
-background-color: lightgray;
-font-weight: bold;
-color:white;
- font-size: 20px;
-  margin:auto 0;
-  width:0%;
-  height:15%;
-  padding:0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-
-ul.slider-inner {
-  position: relative;
-  margin:0;
-  width: 100%;
-  height: 100%;
-  list-style: none;
-  padding:0;
-}
-
-ul.slider-inner li {
-  width:100%;
-  height: 100%;
-  opacity: 0;
-  transition:all 1s ease-in-out;
-}
-
-.slider .slider-inner li{
- position: absolute;
-}
-
-.slider .slider-inner li.show {
-  opacity: 1;
-  width:100%;
-
-
-
-}
-
-li img{
-  width:100%;
-  height:100%;
-}
-
-.nav-btn{
-  display: flex;
-  justify-content: center;
-}
-
-.nav{
-  padding:0;
-  margin:20px 0;
-}
-
-.nav-btn .nav li {
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  margin: 0 5px;
-  border-radius: 15px;
-  background: lightgray;
-  cursor: pointer;
-
-}
 
 }
