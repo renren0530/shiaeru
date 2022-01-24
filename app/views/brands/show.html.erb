@@ -16,7 +16,7 @@
 <% if returns.brand_kinds_id == @brand.id  %>
 
 
-<%= link_to item_path(returns.item_id), class: 'brand-returns-btn' do  %>
+<%= link_to item_return_path(returns.item_id,returns.id), class: 'brand-returns-btn' do  %>
 
 
 
@@ -25,7 +25,7 @@
 <p class="item-price">¥<%= number_to_currency(returns.return_price.to_s, locale:"jp") %></p>
 
 
-<p class="donate">(自然保護団体への寄付額：<%= number_to_currency(returns.return_donate.to_s, locale:"jp") %>)</p>
+<p class="donate">(寄付額：<%= number_to_currency(returns.return_donate.to_s, locale:"jp") %>)</p>
 
 
 <p class="returns-text">支援する</p>

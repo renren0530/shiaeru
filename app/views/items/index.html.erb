@@ -15,6 +15,14 @@
   <h1 class='service-title2'>地球がすべての生命にとって、良い世界になることを目指して</h1>
    <h1 class='service-title3'>応援・ご支援・よろしくお願いいたします</h1> %>
 
+<h3 class="project-list">商品一覧</h3>
+<div class="main">
+ <%= render partial: "@returns", collection: @returns %>
+</div>
+
+
+
+
 <h3 class="shiaeru-project">しあえるの活動</h3>
 
 <div class="shiaeru-content"> 
@@ -31,21 +39,7 @@
   
 </div>
 
-
-
-<h3 class="project-list">プロジェクト一覧</h3>
-
-<div class="main">
- <%= render partial: "item", collection: @items %>
-</div>
-<% if user_signed_in? && (current_user.email == "earth_r@i.softbank.jp") %>
-<%= link_to(new_item_path, class: 'purchase-btns') do  %>
-  <span class='purchase-btn-texts'>プロジェクト登録</span>
-<% end %> 
-<% end %>
-
-
-<h3 class="project-list">ブランド一覧</h3>
+<h3 class="project-list">ブランドから探す</h3>
 <p class="SDGs-text">自然環境保全に関する目標を３つ掲げています！</p>
 
 <div class="SDGs">
@@ -62,5 +56,19 @@
   <span class='purchase-btn-texts'>ブランド登録</span>
 <% end %> 
 <% end %>
+
+
+<h3 class="project-list">プロジェクトから探す</h3>
+
+<div class="main">
+ <%= render partial: "item", collection: @items %>
+</div>
+<% if user_signed_in? && (current_user.email == "earth_r@i.softbank.jp") %>
+<%= link_to(new_item_path, class: 'purchase-btns') do  %>
+  <span class='purchase-btn-texts'>プロジェクト登録</span>
+<% end %> 
+<% end %>
+
+
 
 <%= render "shared/footer" %>

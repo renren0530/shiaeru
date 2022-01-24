@@ -296,6 +296,77 @@ span.purchase-btn-texts{
   margin-left:90px;
 }
 
+/* _@returns */
+
+.item_returns-btn{
+  text-decoration: none;
+  color: #444444;
+  border-top: solid 5px gray;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+  border-radius: 10px;
+  margin:0 0.5vw 1vw;
+  padding:10px;
+  width:19vw;
+  height:380px;
+}
+
+p.item_returns-name{
+  font-family: serif;
+  font-size: 18px;
+  font-weight: bold;
+  margin:0 0 10px 0;
+  height:40px;
+}
+
+.item_returns-image{
+  width:100%;
+  height:55%;
+}
+
+p.items-prices{
+  font-size: 17px;
+  font-family: serif;
+  color:#444444;
+  margin:10px 0 ;
+  font-weight: bold;
+
+}
+
+p.item_return-donate{
+  font-size: 15px;
+  font-weight: bold;
+
+  font-family: serif;
+  color:#444444;
+  margin:10px 0 ;
+}
+
+.returns-text{
+  font-weight: bold;
+  font-family: serif;
+  padding: 5px;
+  font-size: 12px;
+  background-color: #f7f7f7;
+  border:1px solid black;
+  text-align: center;
+  border-radius: 5px;
+  }
+
+  .orner-edit{
+    text-decoration: none;
+    color:gray;
+  }
+
+
+
+
+
+/* _@returns */
+
+
+
+
+
 
 
 

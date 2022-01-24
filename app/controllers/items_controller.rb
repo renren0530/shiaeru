@@ -6,6 +6,7 @@ class ItemsController < ApplicationController
   def index
     @items = Item.all.order('created_at ASC')
     @brands = Brand.all.order('created_at ASC')
+    @returns = Return.all.order('created_at ASC')
   end
 
   def new
