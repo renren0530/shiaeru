@@ -4,12 +4,11 @@
 <p class="item_returns-name"><%= @returns.return_name %></p>
 <%= image_tag @returns.images[0], class: "item_returns-image" %> 
 <p class="items-prices">¥<%= number_to_currency(@returns.return_price.to_s, locale:"jp") %></p>
+<p class="item_return-donate">寄付額：¥<%= number_to_currency(@returns.return_donate.to_s, locale:"jp") %></p>
+<p class="support">支援先：<%=@returns.item.item_name %></p>
 
 
-<p class="item_return-donate">(寄付額：<%= number_to_currency(@returns.return_donate.to_s, locale:"jp") %>)</p>
-
-
-<p class="returns-text">支援する</p>
+<%# <p class="returns-text">支援する</p> %>
 <object>
   <% if user_signed_in? && (current_user.email == "earth_r@i.softbank.jp") %>
   <%= link_to "編集", edit_item_return_path(@returns.item_id, @returns.id), method: :get, class:"orner-edit" %>

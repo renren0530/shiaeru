@@ -307,7 +307,7 @@ span.purchase-btn-texts{
   margin:0 0.5vw 1vw;
   padding:10px;
   width:19vw;
-  height:380px;
+  height:330px;
 }
 
 p.item_returns-name{
@@ -323,11 +323,12 @@ p.item_returns-name{
   height:55%;
 }
 
+
 p.items-prices{
   font-size: 17px;
   font-family: serif;
   color:#444444;
-  margin:10px 0 ;
+  margin:8px 0 ;
   font-weight: bold;
 
 }
@@ -335,11 +336,20 @@ p.items-prices{
 p.item_return-donate{
   font-size: 15px;
   font-weight: bold;
-
   font-family: serif;
   color:#444444;
-  margin:10px 0 ;
+  margin:8px 0 ;
 }
+
+p.support{
+  font-size: 13px;
+  font-weight: bold;
+  font-family: serif;
+  color:#444444;
+  margin:8px 0 ;
+}
+
+
 
 .returns-text{
   font-weight: bold;
