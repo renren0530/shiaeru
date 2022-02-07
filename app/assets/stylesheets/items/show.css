@@ -56,7 +56,16 @@ p.text{
   margin:40px 50px 20px 0;
   font-size: 15px;
   font-family: serif;
+}
 
+a.url{
+  text-decoration: none;
+  color: black;
+}
+
+a.url:hover{
+  text-decoration: underline;
+  color: black;
 }
 
 .project-return{

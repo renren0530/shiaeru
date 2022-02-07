@@ -17,7 +17,14 @@
 <div class="project-content">
   <div class="project-detail">
     <h2 class="project-text">プロジェクト本文</h2>
+    <% if @item.item_name == "日本自然保護協会" %>
     <p class="text", style="white-space:pre-wrap;"><%= @item.item_info %></p>
+    <p>↓↓シュライヒ様のURLはこちら↓↓</p>
+    <a href="https://www.schleich-s.com/ja/JP/home" class="url">https://www.schleich-s.com/ja/JP/home</a>
+    <p> ↓↓日本自然保護協会様のURLはこちら↓↓</p>
+    <a href="https://www.nacsj.or.jp/" class="url">https://www.nacsj.or.jp/</a>
+    <% end %>
+     
   </div>   
   <div class="project-return">
     <h2 class="project-text-price">リターン</h2>
