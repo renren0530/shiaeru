@@ -45,6 +45,14 @@ class ItemsController < ApplicationController
     redirect_to root_path if @item.destroy
   end
 
+   def item_list
+    @returns = Return.all.order('created_at ASC')
+   end
+
+   def project_list
+    @items = Item.all.order('created_at ASC')
+   end
+
   private
 
   def item_params

@@ -1,4 +1,5 @@
 
+
 <li class='list'>
   <%= link_to brand_path(brand.id), class:"item_list" do %>
   <%= image_tag brand.image, class: "item-img" %> 
@@ -11,5 +12,7 @@
        <%= link_to "削除", brand_path(brand.id), method: :delete, class:"orner-edit-btn" %>
       <% end %>
   <% end %>  
-</li>             
+</li>        
+
+
 

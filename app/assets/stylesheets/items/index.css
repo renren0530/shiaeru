@@ -118,7 +118,7 @@ h1.service-title3{
   font-weight: 800;
   text-align: center;
   font-family:serif;
-  margin:20px auto 50px;
+  margin:50px auto;
   font-size: 25px;
 
 }
@@ -204,6 +204,24 @@ h3.project-list{
   bottom: -10px;
   left: 50%;
   transform: translateX(-50%);
+}
+
+p.product-list{
+  position: relative;
+  color: #333333;
+  font-weight: bold;
+  text-align: end;
+  font-family:serif;
+  margin:20px 9vw;
+  font-size: 17px;
+}
+
+.product-list-btn{
+  text-decoration: none;
+}
+
+.product-list-btn:hover{
+  text-decoration: underline #333333;
 }
 
 .main{

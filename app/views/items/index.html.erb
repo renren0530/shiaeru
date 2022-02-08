@@ -16,6 +16,12 @@
    <h1 class='service-title3'>応援・ご支援・よろしくお願いいたします</h1> %>
 
 <h3 class="project-list">商品一覧</h3>
+ <%= link_to(item_list_path, class: 'product-list-btn') do  %>
+<p class="product-list">商品一覧へ ＞</p>
+    <% end %>
+
+
+
 <div class="main">
  <%= render partial: "@returns", collection: @returns %>
 </div>
@@ -47,6 +53,10 @@
 <span><%= image_tag "items/SDGs.goal.png", width:"300", height:"300", class:"sdgs" %></span>
 </div>
 
+ <%= link_to(brand_list_path, class: 'product-list-btn') do  %>
+<p class="product-list">ブランド一覧へ ＞</p>
+    <% end %>
+
 <div class="main">
  <%= render partial: "brands/brand", collection: @brands %>
 </div>
@@ -59,6 +69,9 @@
 
 
 <h3 class="project-list">寄付先から探す</h3>
+ <%= link_to(project_list_path, class: 'product-list-btn') do  %>
+<p class="product-list">寄付先一覧へ ＞</p>
+    <% end %>
 
 <div class="main">
  <%= render partial: "item", collection: @items %>

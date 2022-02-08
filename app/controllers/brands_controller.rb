@@ -38,6 +38,11 @@ class BrandsController < ApplicationController
     redirect_to root_path if @brand.delete
   end
 
+  def brand_list
+    @brands = Brand.all.order('created_at ASC')
+    @returns = Return.all.order('created_at ASC')
+   end
+
   private
 
   def brand_params

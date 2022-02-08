@@ -12,7 +12,9 @@ Rails.application.routes.draw do
          post 'buys/:id' => 'buys#buy'
   end
 end
+
   resources :orders
+  resources :brands
 
 
 
@@ -38,9 +40,14 @@ end
   post '/update_item' => 'carts#update_item'
   delete '/delete_item' => 'carts#delete_item'
   get '/buys_complete' => 'buys#complete'
+  get '/item_list' => 'items#item_list'
+  get '/brand_list' => 'brands#brand_list'
+  get '/project_list' => 'items#project_list'
 
 
-  resources :brands
+
+
+
 
 end
 
