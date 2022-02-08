@@ -212,7 +212,7 @@ p.product-list{
   font-weight: bold;
   text-align: end;
   font-family:serif;
-  margin:20px 9vw;
+  margin:20px 7vw;
   font-size: 17px;
 }
 
@@ -238,15 +238,14 @@ p.product-list{
   border-top: solid 5px gray;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
   border-radius: 10px;
-  width:19vw;
+  width:20vw;
   height:270px;
-  margin:0 0.5vw 1vw;
-  padding:10px;
+  margin:0 0.49vw 1vw;
+  padding:0.49vw;
   font-size: 15px;
   font-weight: bold;
   font-family: serif;
   position: relative;
-
 }
 
 .item_list{
@@ -322,11 +321,12 @@ span.purchase-btn-texts{
   border-top: solid 5px gray;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
   border-radius: 10px;
-  margin:0 0.5vw 1vw;
-  padding:10px;
-  width:19vw;
+  margin:0 0.49vw 1vw;
+  padding:0.49vw;
+  width:20vw;
   height:330px;
 }
+
 
 p.item_returns-name{
   font-family: serif;

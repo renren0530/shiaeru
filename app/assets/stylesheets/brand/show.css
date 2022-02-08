@@ -2,7 +2,7 @@
 
 .brand-content{
   display:flex;
-  margin:0 10vh;
+  margin:0 5vw;
 }
 
 .brand-image{
@@ -42,6 +42,7 @@
 
 .brand-return{
   display:flex;
+  justify-content:start;
   flex-wrap: wrap;
   margin:0 5vw 50px;
 }
@@ -53,9 +54,9 @@
   border-top: solid 5px gray;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
   border-radius: 10px;
-  margin:0 0.5vw 1vw;
-  padding:1vw;
-  width:18.7vw;
+  margin:0 0.49vw 1vw;
+  padding:0.49vw;
+  width:20vw;
   height:330px;
 }
 
