@@ -95,8 +95,8 @@ a.url:hover{
   border-radius: 10px;
   margin:0 0.5vw 1vw;
   padding:20px;
-  width:300px;
-  height:360px;
+  width:19vw;
+  height:330px;
 }
 
 p.returns-name{
@@ -116,7 +116,7 @@ p.item-price{
   font-size: 17px;
   font-family: serif;
   color:#444444;
-  margin:10px 0 ;
+  margin:8px 0 ;
   font-weight: bold;
 
 }
@@ -126,7 +126,7 @@ p.donate{
   font-weight: bold;
   font-family: serif;
   color:#444444;
-  margin:10px 0 ;
+  margin:8px 0 ;
 }
 
 p.return-support{
@@ -134,7 +134,7 @@ p.return-support{
   font-weight: bold;
   font-family: serif;
   color:#444444;
-  margin:0;
+  margin:8px 0 ;
 }
 
 .returns-text{
