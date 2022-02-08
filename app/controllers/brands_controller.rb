@@ -39,8 +39,8 @@ class BrandsController < ApplicationController
   end
 
   def brand_list
-    @brands = Brand.all.order('created_at ASC').limit(8)
-    @returns = Return.all.order('created_at ASC').limit(8)
+    @brands = Brand.all.order('created_at ASC')
+    @returns = Return.all.order('created_at ASC')
    end
 
   private

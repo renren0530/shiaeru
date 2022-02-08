@@ -46,11 +46,11 @@ class ItemsController < ApplicationController
   end
 
    def item_list
-    @returns = Return.all.order('created_at ASC').limit(8)
+    @returns = Return.all.order('created_at ASC')
    end
 
    def project_list
-    @items = Item.all.order('created_at ASC').limit(8)
+    @items = Item.all.order('created_at ASC')
    end
 
   private
