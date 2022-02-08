@@ -195,6 +195,27 @@ h3.project-list{
   font-size: 25px;
 }
 
+h3.project-lists{
+  position: relative;
+  color: #333333;
+  font-weight: 800;
+  text-align: center;
+  font-family:serif;
+  margin:50px auto ;
+  font-size: 25px;
+}
+
+.project-lists:before{
+  position: absolute;
+  content: '';
+  width: 70px;
+  height: 4px;
+  background-color:gray;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .project-list:before{
   position: absolute;
   content: '';
