@@ -17,18 +17,13 @@
 
 
 <%= link_to item_return_path(returns.item_id,returns.id), class: 'brand-returns-btn' do  %>
-
-
-
 <p class="returns-name"><%= returns.return_name %></p>
 <%= image_tag returns.images[0], class: "returns-image" %> 
 <p class="item-price">¥<%= number_to_currency(returns.return_price.to_s, locale:"jp") %></p>
 
 
 <p class="donate">寄付額：¥<%= number_to_currency(returns.return_donate.to_s, locale:"jp") %></p>
-
-
-<p class="returns-text">支援する</p>
+<p class="return-support">支援先：<%=returns.item.item_name %></p>
 <% end %>
 <% end %>
 <% end %>

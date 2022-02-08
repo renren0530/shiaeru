@@ -7,9 +7,9 @@
 
 
 <p class="donate">寄付額：¥<%= number_to_currency(@return.return_donate.to_s, locale:"jp") %></p>
+<p class="return-support">支援先：<%=@return.item.item_name %></p>
 
 
-<p class="returns-text">支援する</p>
 <object>
   <% if user_signed_in? && (current_user.email == "earth_r@i.softbank.jp") %>
   <%= link_to "編集", edit_item_return_path(@item.id,@return.id), method: :get, class:"orner-edit" %>
