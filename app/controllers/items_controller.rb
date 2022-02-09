@@ -4,9 +4,9 @@ class ItemsController < ApplicationController
 
 
   def index
-    @items = Item.all.order('created_at ASC').limit(8)
-    @brands = Brand.all.order('created_at ASC').limit(8)
-    @returns = Return.all.order('created_at ASC').limit(8)
+    @items = Item.all.order('created_at ASC').limit(10)
+    @brands = Brand.all.order('created_at ASC').limit(10)
+    @returns = Return.all.order('created_at ASC').limit(10)
   end
 
   def new
