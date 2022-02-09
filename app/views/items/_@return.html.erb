@@ -10,11 +10,11 @@
 <p class="return-support">支援先：<%=@return.item.item_name %></p>
 
 
-<object>
+<% end %>
+<% end %>
+
   <% if user_signed_in? && (current_user.email == "earth_r@i.softbank.jp") %>
   <%= link_to "編集", edit_item_return_path(@item.id,@return.id), method: :get, class:"orner-edit" %>
   <%= link_to "削除", item_return_path(@item.id,@return.id), method: :delete, class:"orner-edit" %>
   <% end %> 
-</object>  
-<% end %>
-<% end %>
+ 
