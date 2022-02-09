@@ -6,11 +6,12 @@
             <span>sample</span>
           </div>
   <p class="item-info", style="white-space:pre-wrap;"><%= item.item_name %></p>
+  <% end %>  
+</li>
+
       <% if user_signed_in? && (current_user.email == "earth_r@i.softbank.jp") %>
        <%= link_to "編集", edit_item_path(item.id), method: :get, class: "orner-edit-btn" %>
        <%= link_to "削除", item_path(item.id), method: :delete, class:"orner-edit-btn" %>
       <% end %>
-  <% end %>  
-</li>
 
   

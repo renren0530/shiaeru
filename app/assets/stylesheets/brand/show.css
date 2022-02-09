@@ -48,16 +48,4 @@
 }
 
 
-.brand-returns-btn{
-  text-decoration: none;
-  color: #444444;
-  border-top: solid 5px gray;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
-  border-radius: 10px;
-  margin:0 0.6vw 1vw;
-  padding:0.6vw;
-  width:15vw;
-  height:330px;
-}
-
 }

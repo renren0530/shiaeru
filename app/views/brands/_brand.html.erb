@@ -7,12 +7,12 @@
             <span>sample</span>
           </div>
   <p class="item-info", style="white-space:pre-wrap;"><%= brand.brand_name %></p>
+  <% end %>  
+</li>        
       <% if user_signed_in? && (current_user.email == "earth_r@i.softbank.jp") %>
        <%= link_to "編集", edit_brand_path(brand.id), method: :get, class: "orner-edit-btn" %>
        <%= link_to "削除", brand_path(brand.id), method: :delete, class:"orner-edit-btn" %>
       <% end %>
-  <% end %>  
-</li>        
 
 
 

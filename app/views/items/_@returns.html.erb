@@ -9,11 +9,11 @@
 
 
 <%# <p class="returns-text">支援する</p> %>
-<object>
+
+ 
+<% end %>
+<% end %>
   <% if user_signed_in? && (current_user.email == "earth_r@i.softbank.jp") %>
   <%= link_to "編集", edit_item_return_path(@returns.item_id, @returns.id), method: :get, class:"orner-edit" %>
   <%= link_to "削除", item_return_path(@returns.item_id, @returns.id), method: :delete, class:"orner-edit" %>
   <% end %> 
-</object>  
-<% end %>
-<% end %>
