@@ -259,10 +259,10 @@ p.product-list{
   border-top: solid 5px gray;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
   border-radius: 10px;
-  width:20vw;
+  width:15vw;
   height:270px;
-  margin:0 0.49vw 1vw;
-  padding:0.49vw;
+  margin:0 0.6vw 1vw;
+  padding:0.6vw;
   font-size: 15px;
   font-weight: bold;
   font-family: serif;
@@ -342,9 +342,9 @@ span.purchase-btn-texts{
   border-top: solid 5px gray;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
   border-radius: 10px;
-  margin:0 0.49vw 1vw;
-  padding:0.49vw;
-  width:20vw;
+  margin:0 0.6vw 1vw;
+  padding:0.6vw;
+  width:15vw;
   height:330px;
 }
 
