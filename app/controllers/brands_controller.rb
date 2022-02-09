@@ -1,5 +1,5 @@
 class BrandsController < ApplicationController
-  before_action :authenticate_user!, except: [:show]
+  before_action :authenticate_user!, except: [:show, :brand_list]
   before_action :set_action, only: [:new, :create, :edit, :update, :destroy]
 
   def new
