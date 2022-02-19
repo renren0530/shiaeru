@@ -2,9 +2,9 @@
 <li class='list'>
   <%= link_to item_path(item.id), class:"item_list" do %>
   <%= image_tag item.image, class: "item-img" %> 
-          <div class='sample'>
+          <%# <div class='sample'>
             <span>sample</span>
-          </div>
+          </div> %>
   <p class="item-info", style="white-space:pre-wrap;"><%= item.item_name %></p>
   <% end %>  
 </li>

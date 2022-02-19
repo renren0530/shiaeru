@@ -3,9 +3,9 @@
 <li class='list'>
   <%= link_to brand_path(brand.id), class:"item_list" do %>
   <%= image_tag brand.image, class: "item-img" %> 
-    <div class='sample'>
+    <%# <div class='sample'>
             <span>sample</span>
-          </div>
+          </div> %>
   <p class="item-info", style="white-space:pre-wrap;"><%= brand.brand_name %></p>
   <% end %>  
 </li>        
