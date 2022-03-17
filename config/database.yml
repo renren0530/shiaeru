@@ -53,3 +53,4 @@ production:
   database: shiaeru_production
   username: shiaeru
   password: <%= ENV['SHIAERU_DATABASE_PASSWORD'] %>
+  

@@ -130,6 +130,8 @@ end
 if ENV["PROXIMO_URL"]
   RestClient.proxy = ENV["PROXIMO_URL"] 
   res = RestClient.get("https://beta.epsilon.jp/cgi-bin/order/receive_order3.cgi")
+  puts "status code", res.code
+  puts "headers", res.headers
   end
 
  
