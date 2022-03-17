@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', function(){
 
+if ( document.getElementById('arrow-prev')){
+
 var imgList =[
   "assets/items/top_image0.jpg",
   "assets/items/top_image3.jpg",
@@ -95,5 +97,6 @@ for(var i = 0; i < dotNavigation.length; i++) {
 	}, false);
 }
 
+}
 })
 

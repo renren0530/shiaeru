@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     resources :returns do
          resources :buys 
          post 'buys/:id' => 'buys#buy'
+     
   end
 end
 
