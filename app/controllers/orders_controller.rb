@@ -50,7 +50,7 @@ class OrdersController < ApplicationController
   end
 
   def settlement
-
+    binding.pry
     require "cgi"
     require "uri"
     require "net/https"
@@ -58,6 +58,12 @@ class OrdersController < ApplicationController
     require "open-uri"
     require 'active_support'
     require 'active_support/core_ext'
+    require "rest-client"
+
+
+
+    
+
     
     err_msg = nil
     
@@ -93,6 +99,8 @@ class OrdersController < ApplicationController
                 "xml" => "1",
                 "character_code" => "UTF8"
       }
+
+    
     
     # オーダー情報送信先URL(試験用)
     # 本番環境でご利用の場合は契約時に弊社からお送りするURLに変更してください。
@@ -145,6 +153,7 @@ class OrdersController < ApplicationController
           exit 1
       end
     binding.pry
+
     
       # result = 1 の場合、送信に成功
       if response["result"] == "1" then

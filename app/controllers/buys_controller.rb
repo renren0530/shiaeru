@@ -66,6 +66,10 @@ require "rexml/document"
 require "open-uri"
 require 'active_support'
 require 'active_support/core_ext'
+require "rest-client"
+
+
+
 
 err_msg = nil
 
@@ -123,6 +127,10 @@ param = cgi.params
          http.request( post_data )
 end
 
+if ENV["PROXIMO_URL"]
+  RestClient.proxy = ENV["PROXIMO_URL"] 
+  res = RestClient.get("https://beta.epsilon.jp/cgi-bin/order/receive_order3.cgi")
+  end
 
  
 # binding.pry
