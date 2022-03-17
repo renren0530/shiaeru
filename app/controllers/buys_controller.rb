@@ -23,9 +23,6 @@ class BuysController < ApplicationController
     @buy = Buy.find(params[:buy_id])
     @return = Return.find(params[:return_id])
     @order_residence = OrderResidence.new(order_params)
-
-    
-    
     if @order_residence.valid?
       settlement
       # @order_residence.save
@@ -57,7 +54,7 @@ class BuysController < ApplicationController
   #     currency: 'jpy'
   #   )
   
-  end
+  
 
 
 def settlement
@@ -166,5 +163,6 @@ end
       exit 1
   end
 
+end
 end
 
