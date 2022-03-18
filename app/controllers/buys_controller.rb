@@ -111,6 +111,7 @@ response = Hash.new
 cgi = CGI.new( :accept_charset => 'UTF-8' )
 param = cgi.params
 
+
          post_data = Net::HTTP::Post.new(order_url.request_uri )
          post_data.set_form_data(data)
          http = Net::HTTP.new(order_url.host,order_url.port)
@@ -122,19 +123,14 @@ param = cgi.params
          http.open_timeout = 20 # セッション接続までのタイムアウト時間
          http.read_timeout = 20 # 応答を待つまでのタイムアウト時間
 
+         
+
          # EPSILONに接続して送信
          result = http.start do
          http.request( post_data )
 end
 
-if ENV["PROXIMO_URL"]
-  RestClient.proxy = ENV["PROXIMO_URL"] 
-  res = RestClient.get("https://beta.epsilon.jp/cgi-bin/order/receive_order3.cgi")
-  puts "status code", res.code
-  puts "headers", res.headers
-  end
 
- 
 # binding.pry
 
     # 結果の確認
@@ -152,6 +148,7 @@ if ENV["PROXIMO_URL"]
   order_form(err_msg, item, user_id, user_name, user_mail_add) 
       exit 1
   end
+ 
 
   # result = 1 の場合、送信に成功
   if response["result"] == "1" then
