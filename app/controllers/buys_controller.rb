@@ -131,6 +131,13 @@ param = cgi.params
 end
 
 
+# if ENV["PROXIMO_URL"]
+#   RestClient.proxy = ENV["PROXIMO_URL"] 
+#   res = RestClient.get(post_data)
+#   puts "status code", res.code
+#   puts "headers", res.headers
+#   end
+
 # binding.pry
 
     # 結果の確認
@@ -148,7 +155,8 @@ end
   order_form(err_msg, item, user_id, user_name, user_mail_add) 
       exit 1
   end
- 
+binding.pry
+
 
   # result = 1 の場合、送信に成功
   if response["result"] == "1" then
