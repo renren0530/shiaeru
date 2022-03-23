@@ -68,7 +68,7 @@ require 'active_support'
 require 'active_support/core_ext'
 require "rest-client"
 
-
+# proxy_port = -5000
 
 
 err_msg = nil
@@ -96,18 +96,18 @@ err_msg = nil
             "character_code" => "UTF8"
   }
 
-# オーダー情報送信先URL(試験用)
-# 本番環境でご利用の場合は契約時に弊社からお送りするURLに変更してください。
+# # オーダー情報送信先URL(試験用)
+# # 本番環境でご利用の場合は契約時に弊社からお送りするURLに変更してください。
 order_url = URI.parse("https://beta.epsilon.jp/cgi-bin/order/receive_order3.cgi")
 
-# 注文結果取得CGI(試験用)
-# 展開環境に応じて適宜変更してください。
+# # 注文結果取得CGI(試験用)
+# # 展開環境に応じて適宜変更してください。
 confirm_url = "./c_cgi2.cgi"
 
-# オーダー情報を送信した結果を格納する連想配列
+# # オーダー情報を送信した結果を格納する連想配列
 response = Hash.new
 
-# CGIオブジェクトの生成
+# # CGIオブジェクトの生成
 cgi = CGI.new( :accept_charset => 'UTF-8' )
 param = cgi.params
 
@@ -131,12 +131,9 @@ param = cgi.params
 end
 
 
-
 # if ENV["PROXIMO_URL"]
 #   RestClient.proxy = ENV["PROXIMO_URL"] 
-#   res = RestClient.get("https://beta.epsilon.jp/cgi-bin/order/receive_order3.cgi", data)
-#   puts "status code", res.code
-#   puts "headers", res.headers
+#   result = RestClient.get("https://beta.epsilon.jp/cgi-bin/order/receive_order3.cgi",data)
 #   end
 
 
@@ -152,9 +149,9 @@ end
   else
       # イプシロンに対して接続に失敗
       err_msg =  "データの送信に失敗しました %s:%s<br><br>"%[result.code,result.headers]
-  order_form(err_msg, item, user_id, user_name, user_mail_add) 
       exit 1
   end
+
 
 
 
