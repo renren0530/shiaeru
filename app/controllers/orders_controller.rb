@@ -50,7 +50,6 @@ class OrdersController < ApplicationController
   end
 
   def settlement
-    binding.pry
     require "cgi"
     require "uri"
     require "net/https"

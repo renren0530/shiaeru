@@ -125,20 +125,20 @@ param = cgi.params
 
          
 
-         # EPSILONに接続して送信
+        #  EPSILONに接続して送信
          result = http.start do
          http.request( post_data )
 end
 
 
+
 # if ENV["PROXIMO_URL"]
 #   RestClient.proxy = ENV["PROXIMO_URL"] 
-#   res = RestClient.get(post_data)
+#   res = RestClient.get("https://beta.epsilon.jp/cgi-bin/order/receive_order3.cgi", data)
 #   puts "status code", res.code
 #   puts "headers", res.headers
 #   end
 
-# binding.pry
 
     # 結果の確認
     if result.code == "200" then
@@ -151,11 +151,12 @@ end
       end
   else
       # イプシロンに対して接続に失敗
-      err_msg =  "データの送信に失敗しました %s:%s<br><br>"%[result.code,result.message]
+      err_msg =  "データの送信に失敗しました %s:%s<br><br>"%[result.code,result.headers]
   order_form(err_msg, item, user_id, user_name, user_mail_add) 
       exit 1
   end
-binding.pry
+
+  binding.pry
 
 
   # result = 1 の場合、送信に成功
