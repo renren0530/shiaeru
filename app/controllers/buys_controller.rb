@@ -156,7 +156,6 @@ end
       exit 1
   end
 
-  binding.pry
 
 
   # result = 1 の場合、送信に成功
