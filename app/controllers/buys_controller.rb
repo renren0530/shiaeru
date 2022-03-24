@@ -68,7 +68,7 @@ require 'active_support'
 require 'active_support/core_ext'
 require "rest-client"
 
-# proxy_port = -5000
+
 
 
 err_msg = nil
@@ -112,6 +112,7 @@ cgi = CGI.new( :accept_charset => 'UTF-8' )
 param = cgi.params
 
 
+
          post_data = Net::HTTP::Post.new(order_url.request_uri )
          post_data.set_form_data(data)
          http = Net::HTTP.new(order_url.host,order_url.port)
@@ -131,9 +132,11 @@ param = cgi.params
 end
 
 
+
+
 # if ENV["PROXIMO_URL"]
 #   RestClient.proxy = ENV["PROXIMO_URL"] 
-#   result = RestClient.get("https://beta.epsilon.jp/cgi-bin/order/receive_order3.cgi",data)
+#   result = RestClient::Request.execute(method: :get, url: "https://beta.epsilon.jp/cgi-bin/order/receive_order3.cgi", headers: {params: data})
 #   end
 
 
@@ -147,6 +150,7 @@ end
           end
       end
   else
+
       # イプシロンに対して接続に失敗
       err_msg =  "データの送信に失敗しました %s:%s<br><br>"%[result.code,result.headers]
       exit 1
