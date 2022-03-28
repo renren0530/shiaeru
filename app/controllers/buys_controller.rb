@@ -68,7 +68,7 @@ require 'active_support'
 require 'active_support/core_ext'
 require "rest-client"
 
-
+# proxy_port = -5000
 
 
 err_msg = nil
@@ -96,66 +96,72 @@ err_msg = nil
             "character_code" => "UTF8"
   }
 
-# # オーダー情報送信先URL(試験用)
-# # 本番環境でご利用の場合は契約時に弊社からお送りするURLに変更してください。
+# オーダー情報送信先URL(試験用)
+# 本番環境でご利用の場合は契約時に弊社からお送りするURLに変更してください。
 order_url = URI.parse("https://beta.epsilon.jp/cgi-bin/order/receive_order3.cgi")
-
-# # 注文結果取得CGI(試験用)
-# # 展開環境に応じて適宜変更してください。
+post_url =URI.parse(ENV["PROXIMO_URL"])
+# 注文結果取得CGI(試験用)
+# 展開環境に応じて適宜変更してください。
 confirm_url = "./c_cgi2.cgi"
 
-# # オーダー情報を送信した結果を格納する連想配列
+# オーダー情報を送信した結果を格納する連想配列
 response = Hash.new
 
-# # CGIオブジェクトの生成
+# CGIオブジェクトの生成
 cgi = CGI.new( :accept_charset => 'UTF-8' )
 param = cgi.params
 
 
 
-         post_data = Net::HTTP::Post.new(order_url.request_uri )
-         post_data.set_form_data(data)
-         http = Net::HTTP.new(order_url.host,order_url.port)
+
+
+        #  proxy_class = Net::HTTP::Proxy("ec2-54-225-208-216.compute-1.amazonaws.com")
+        #  http = proxy_class.new('www.example.org')
+        #  http.start(data)
+        
+
+        #  http = Net::HTTP.new(order_url.host,order_url.port,post_url.host,post_url.port)
+
+        #  post_data = Net::HTTP::Post.new(order_url.request_uri )
+        #  post_data.set_form_data(data)
+        #  http = Net::HTTP.new(order_url.host,order_url.port)
          
-         http.use_ssl = true # SSLを有効にします
+        #  http.use_ssl = true # SSLを有効にします
          
         #  http.verify_mode = OpenSSL::SSL::VERIFY_NONE # ローカル試験用で消す
          
-         http.open_timeout = 20 # セッション接続までのタイムアウト時間
-         http.read_timeout = 20 # 応答を待つまでのタイムアウト時間
+        #  http.open_timeout = 20 # セッション接続までのタイムアウト時間
+        #  http.read_timeout = 20 # 応答を待つまでのタイムアウト時間
 
-         
 
         #  EPSILONに接続して送信
-         result = http.start do
-         http.request( post_data )
-end
+#          result = http.start do
+#          http.request( post_data )
+# end
 
+  RestClient.proxy = ENV["PROXIMO_URL"] 
+  result = RestClient.post("https://beta.epsilon.jp/cgi-bin/order/receive_order3.cgi", data)
 
-
-
-# if ENV["PROXIMO_URL"]
-#   RestClient.proxy = ENV["PROXIMO_URL"] 
-#   result = RestClient::Request.execute(method: :get, url: "https://beta.epsilon.jp/cgi-bin/order/receive_order3.cgi", headers: {params: data})
-#   end
 
 
     # 結果の確認
-    if result.code == "200" then
+    # if result.code == "200" 
       ##xml = REXML::Document.new(result.body)
-      xml = REXML::Document.new(( result.body.gsub("x-sjis-cp932","Shift_JIS"))) # 文字コードをSJISとして読み込む(CP932はSJISの拡張なので基本はOK)
+      # p "============通った=============="
+      xml = REXML::Document.new(( result.body.gsub("x-sjis-cp932","Shift_JIS")))
+       # 文字コードをSJISとして読み込む(CP932はSJISの拡張なので基本はOK)
       xml.elements.each("Epsilon_result/result") do |element|
           element.attributes.each do |name, value|
               response[name] = CGI.unescape(value)
+            
           end
       end
-  else
-
-      # イプシロンに対して接続に失敗
-      err_msg =  "データの送信に失敗しました %s:%s<br><br>"%[result.code,result.headers]
-      exit 1
-  end
-
+  # else
+  #     # イプシロンに対して接続に失敗
+  #     err_msg =  "データの送信に失敗しました %s:%s<br><br>"%[result.code,result.headers]
+    
+  #     exit 1
+  # end
 
 
 
