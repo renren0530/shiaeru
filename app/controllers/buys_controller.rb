@@ -23,14 +23,9 @@ class BuysController < ApplicationController
     @buy = Buy.find(params[:buy_id])
     @return = Return.find(params[:return_id])
     @order_residence = OrderResidence.new(order_params)
+    @order = Order.order(updated_at: :desc).limit(1)
     if @order_residence.valid?
       settlement
-      # @order_residence.save
-      # @order = Order.order(updated_at: :desc).limit(1)
-      # order_return = OrderReturn.new(order_id: @order.ids[0], return_id: @buy.return_id, quantity: @buy.quantity)
-      # order_return.save
-      # @email = current_user.email
-      # BuyMailer.buy_mail(@email, @buy, @return, @order_residence, current_user.nickname).deliver_now
     else
       render :show
     end
@@ -87,7 +82,7 @@ err_msg = nil
             "user_mail_add" => current_user.email,
             "item_code" => @buy.return_id,       
             "item_name" => @return.item.item_name,
-            "order_number" => @buy.id, 
+            "order_number" => @order.ids[0], 
             "st_code" => "10000-0000-00000-00000-00000-00000-00000",
             "mission_code" => "1", 
             "item_price" => @return.return_price,     
@@ -96,13 +91,6 @@ err_msg = nil
             "character_code" => "UTF8"
   }
 
-# オーダー情報送信先URL(試験用)
-# 本番環境でご利用の場合は契約時に弊社からお送りするURLに変更してください。
-order_url = URI.parse("https://beta.epsilon.jp/cgi-bin/order/receive_order3.cgi")
-post_url =URI.parse(ENV["PROXIMO_URL"])
-# 注文結果取得CGI(試験用)
-# 展開環境に応じて適宜変更してください。
-confirm_url = "./c_cgi2.cgi"
 
 # オーダー情報を送信した結果を格納する連想配列
 response = Hash.new
@@ -111,38 +99,8 @@ response = Hash.new
 cgi = CGI.new( :accept_charset => 'UTF-8' )
 param = cgi.params
 
-
-
-
-
-        #  proxy_class = Net::HTTP::Proxy("ec2-54-225-208-216.compute-1.amazonaws.com")
-        #  http = proxy_class.new('www.example.org')
-        #  http.start(data)
-        
-
-        #  http = Net::HTTP.new(order_url.host,order_url.port,post_url.host,post_url.port)
-
-        #  post_data = Net::HTTP::Post.new(order_url.request_uri )
-        #  post_data.set_form_data(data)
-        #  http = Net::HTTP.new(order_url.host,order_url.port)
-         
-        #  http.use_ssl = true # SSLを有効にします
-         
-        #  http.verify_mode = OpenSSL::SSL::VERIFY_NONE # ローカル試験用で消す
-         
-        #  http.open_timeout = 20 # セッション接続までのタイムアウト時間
-        #  http.read_timeout = 20 # 応答を待つまでのタイムアウト時間
-
-
-        #  EPSILONに接続して送信
-#          result = http.start do
-#          http.request( post_data )
-# end
-
   RestClient.proxy = ENV["PROXIMO_URL"] 
-  result = RestClient.post("https://beta.epsilon.jp/cgi-bin/order/receive_order3.cgi", data)
-
-
+  result = RestClient.post("https://secure.epsilon.jp/cgi-bin/order/receive_order3.cgi", data)
 
     # 結果の確認
     # if result.code == "200" 
