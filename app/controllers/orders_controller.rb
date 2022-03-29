@@ -12,7 +12,6 @@ class OrdersController < ApplicationController
   end
 
   def create
-    
     @cart = current_user.cart
     @order_residence = OrderResidence.new(order_params)
     
@@ -28,10 +27,10 @@ class OrdersController < ApplicationController
       # @email = current_user.email
       # BuyMailer.order_mail(@email, @cart, @order, @order_residence, current_user.nickname).deliver_now
       # @cart.destroy
-     
     else
       render :index
     end
+
   end
 
 
@@ -72,12 +71,12 @@ class OrdersController < ApplicationController
        # 契約番号(8桁) オンライン登録時に発行された契約番号を入力してください。
        contract_code = "72017390"
 
-
+       item_name = ""
        sum = 0
        @cart.cart_returns.each do |cart_return| 
+       item_name =  item_name + cart_return.return.return_name
        price = cart_return.return.return_price.to_i 
        quantity = cart_return.quantity.to_i 
-       subtotal = price*quantity 
        sum = price*quantity + sum
        end
 
@@ -89,7 +88,7 @@ class OrdersController < ApplicationController
                 "user_name" => current_user.nickname,  
                 "user_mail_add" => current_user.email,
                 "item_code" => @cart.id,       
-                "item_name" => "カート内商品",
+                "item_name" => item_name,
                 "order_number" => @order.ids[0],  
                 "st_code" => "10000-0000-00000-00000-00000-00000-00000",
                 "mission_code" => "1", 

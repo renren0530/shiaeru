@@ -13,6 +13,7 @@
       <% quantity = cart_return.quantity.to_i %>
       <% subtotal = price*quantity %>
       <% sum = price*quantity + sum %>
+
     <%# 購入内容の表示 %>
       <div class="order-product">
         <%= image_tag cart_return.return.images[0], class: 'buy-item-img' %>
@@ -24,15 +25,10 @@
             <p class='item-price-quantity'>×<%= cart_return.quantity %>個</p>
           </div>
           <p class='item-price-text'>小計：<%= number_to_currency(subtotal.to_s, locale:"jp") %></p>
-
         </div>
       </div>
-
-     
-
-    
-    <%# /購入内容の表示 %>
     <% end %>
+    <%# /購入内容の表示 %>
 
 
     <%# 支払額の表示 %>
@@ -55,6 +51,7 @@
 <%
 =begin
 %>
+
 <%# カード情報の入力 %>
   <div class='credit-card-form'>
       <h1 class='info-input-haedline'>
@@ -94,6 +91,7 @@
       </div>
     </div>
 <%# カード情報の入力 %>
+
 <%
 =end
 %>
@@ -148,7 +146,7 @@
     </div>
     <%# /配送先の入力 %>
     <div class='buy-btn'>
-      <%= f.submit "購入を確定する" ,class:"buy-red-btn", id:"button", type:"submit" %>
+      <%= f.submit "決済画面へ進む" ,class:"buy-red-btn", id:"button", type:"submit" %>
     </div>
     <% end %>
   </div>

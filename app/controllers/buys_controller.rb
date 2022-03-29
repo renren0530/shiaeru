@@ -23,8 +23,9 @@ class BuysController < ApplicationController
     @buy = Buy.find(params[:buy_id])
     @return = Return.find(params[:return_id])
     @order_residence = OrderResidence.new(order_params)
-    @order = Order.order(updated_at: :desc).limit(1)
     if @order_residence.valid?
+      @order_residence.save
+      @order = Order.order(updated_at: :desc).limit(1)
       settlement
     else
       render :show
@@ -81,7 +82,7 @@ err_msg = nil
             "user_name" => current_user.nickname,  
             "user_mail_add" => current_user.email,
             "item_code" => @buy.return_id,       
-            "item_name" => @return.item.item_name,
+            "item_name" => @return.return_name,
             "order_number" => @order.ids[0], 
             "st_code" => "10000-0000-00000-00000-00000-00000-00000",
             "mission_code" => "1", 
