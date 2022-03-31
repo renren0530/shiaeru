@@ -27,6 +27,8 @@ class BuysController < ApplicationController
       @order_residence.save
       @order = Order.order(updated_at: :desc).limit(1)
       settlement
+      @email = "info@shiaeru.net"
+      BuyMailer.buy_mail(@email, @buy, @return, @order_residence, current_user.nickname).deliver_now
     else
       render :show
     end
@@ -64,8 +66,6 @@ require 'active_support'
 require 'active_support/core_ext'
 require "rest-client"
 
-# proxy_port = -5000
-
 
 err_msg = nil
 
@@ -101,7 +101,7 @@ cgi = CGI.new( :accept_charset => 'UTF-8' )
 param = cgi.params
 
   RestClient.proxy = ENV["PROXIMO_URL"] 
-  result = RestClient.post("https://secure.epsilon.jp/cgi-bin/order/receive_order3.cgi", data)
+  result = RestClient.post("https://secure.epsilon.jp/cgi-bin/order/receive_order3.cgi",data)
 
     # 結果の確認
     # if result.code == "200" 

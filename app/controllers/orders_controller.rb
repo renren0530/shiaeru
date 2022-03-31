@@ -24,9 +24,9 @@ class OrdersController < ApplicationController
       #                                  quantity: cart_return.quantity)
       #   order_return.save
       # end
-      # @email = current_user.email
-      # BuyMailer.order_mail(@email, @cart, @order, @order_residence, current_user.nickname).deliver_now
-      # @cart.destroy
+      @email = "info@shiaeru.net"
+      BuyMailer.order_mail(@email, @cart, @order, @order_residence, current_user.nickname).deliver_now
+      @cart.destroy
     else
       render :index
     end
@@ -107,7 +107,7 @@ class OrdersController < ApplicationController
     param = cgi.params
     
       RestClient.proxy = ENV["PROXIMO_URL"] 
-      result = RestClient.post("https://secure.epsilon.jp/cgi-bin/order/receive_order3.cgi", data)
+      result = RestClient.post("https://secure.epsilon.jp/cgi-bin/order/receive_order3.cgi",data)
     
     
     
