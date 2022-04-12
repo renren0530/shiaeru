@@ -3,10 +3,10 @@ document.addEventListener('DOMContentLoaded', function(){
 if ( document.getElementById('arrow-prev')){
 
 var imgList =[
+  "assets/items/top_image5.png",
   "assets/items/top_image0.jpg",
   "assets/items/top_image3.jpg",
   "assets/items/top_image4.jpg",
-  "assets/items/top_image.jpg",
 ]   
 
 

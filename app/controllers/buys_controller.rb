@@ -32,7 +32,9 @@ class BuysController < ApplicationController
         BuyMailer.cash_on_buy_mail(@email, @buy, @return, @order_residence, current_user.nickname).deliver_now
         BuyMailer.buy_mail(@soneemail, @buy, @return, @order_residence, current_user.nickname).deliver_now
         redirect_to buys_complete_path
-      end
+      else
+        render :show
+       end
     end
 
     if params[:button2]

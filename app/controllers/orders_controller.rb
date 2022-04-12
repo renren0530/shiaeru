@@ -29,6 +29,8 @@ class OrdersController < ApplicationController
       BuyMailer.order_mail(@soneemail, @cart, @order, @order_residence, current_user.nickname).deliver_now
       @cart.destroy
       redirect_to buys_complete_path
+    else
+      render :index
     end
   end
 
