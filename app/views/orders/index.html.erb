@@ -145,11 +145,21 @@
       </div>
     </div>
     <%# /配送先の入力 %>
+
+       <div class='buy-method'>
+    <h1 class='info-input-haedline'>
+        購入方法
+      </h1>
+          <div class='buy-btn'>
+      <%= f.submit "代引きで購入する" ,class:"buy-red-btn", id:"button", type:"submit", name:"button1" %>
+    </div>
+
     <div class='buy-btn'>
-      <%= f.submit "決済画面へ進む" ,class:"buy-red-btn", id:"button", type:"submit" %>
+      <%= f.submit "クレジットカードで購入する" ,class:"buy-red-btn", id:"button", type:"submit", name:"button2" %>
     </div>
     <% end %>
   </div>
+ </div>
 </div>
 <%= render "shared/footer"%>
 

@@ -20,19 +20,37 @@ class BuysController < ApplicationController
   end
 
   def create
+    if params[:button1]
+      @buy = Buy.find(params[:buy_id])
+      @return = Return.find(params[:return_id])
+      @order_residence = OrderResidence.new(order_params)
+      if @order_residence.valid?
+        @order_residence.save
+        @order = Order.order(updated_at: :desc).limit(1)
+        @email = current_user.email
+        @soneemail = "info@shiaeru.net"
+        BuyMailer.cash_on_buy_mail(@email, @buy, @return, @order_residence, current_user.nickname).deliver_now
+        BuyMailer.buy_mail(@soneemail, @buy, @return, @order_residence, current_user.nickname).deliver_now
+        redirect_to buys_complete_path
+      end
+    end
+
+    if params[:button2]
     @buy = Buy.find(params[:buy_id])
     @return = Return.find(params[:return_id])
     @order_residence = OrderResidence.new(order_params)
-    if @order_residence.valid?
+     if @order_residence.valid?
       @order_residence.save
       @order = Order.order(updated_at: :desc).limit(1)
       settlement
-      @email = "info@shiaeru.net"
-      BuyMailer.buy_mail(@email, @buy, @return, @order_residence, current_user.nickname).deliver_now
-    else
+      # @email = "info@shiaeru.net"
+      # BuyMailer.buy_sonemails(@email, @buy, @return, @order_residence, current_user.nickname).deliver_now
+     else
       render :show
+     end
     end
   end
+
 
   private
 
@@ -75,6 +93,8 @@ err_msg = nil
    # 契約番号(8桁) オンライン登録時に発行された契約番号を入力してください。
    contract_code = "72017390"
 
+
+
   data = {
         "version" => "2",
             "contract_code" => contract_code,
@@ -89,7 +109,8 @@ err_msg = nil
             "item_price" => @return.return_price,     
             "process_code" => "1",                
             "xml" => "1",
-            "character_code" => "UTF8"
+            "character_code" => "UTF8",
+            "memo1" => params[:order_residence]
   }
 
 

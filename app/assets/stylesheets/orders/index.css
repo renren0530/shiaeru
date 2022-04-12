@@ -174,7 +174,7 @@ margin-top:13px;
 .buy-btn {
   width: 50%;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .buy-red-btn {
@@ -186,5 +186,14 @@ margin-top:13px;
   font-size: 14px;
   cursor: pointer;
 }
+
+.buy-method{
+  margin:30px 0 0 0 ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ 
 
 }
