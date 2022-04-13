@@ -1,5 +1,5 @@
 
-<% unless @returns.return_name == "※現在このリターン商品はありません" %>
+<% unless @returns.return_name == "削除" %>
 <%= link_to(item_return_path(@returns.item_id, @returns.id), class: 'item_returns-btn') do  %>
 <p class="item_returns-name"><%= @returns.return_name %></p>
 <%= image_tag @returns.images[0], class: "item_returns-image" %> 

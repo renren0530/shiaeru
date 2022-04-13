@@ -1,0 +1,19 @@
+
+<% unless @ukuraina.return_name == "削除" %>
+<%= link_to(item_return_path(@ukuraina.item_id, @ukuraina.id), class: 'item_returns-btn') do  %>
+<p class="item_returns-name"><%= @ukuraina.return_name %></p>
+<%= image_tag @ukuraina.images[0], class: "item_returns-image" %> 
+<p class="items-prices">¥<%= number_to_currency(@ukuraina.return_price.to_s, locale:"jp") %></p>
+<p class="item_return-donate">寄付額：¥<%= number_to_currency(@ukuraina.return_donate.to_s, locale:"jp") %></p>
+<p class="support">支援先：<%=@ukuraina.item.item_name %></p>
+
+
+<%# <p class="returns-text">支援する</p> %>
+
+ 
+<% end %>
+<% end %>
+  <% if user_signed_in? && (current_user.email == "earth_r@i.softbank.jp") %>
+  <%= link_to "編集", edit_item_return_path(@ukuraina.item_id, @ukuraina.id), method: :get, class:"orner-edit" %>
+  <%= link_to "削除", item_return_path(@ukuraina.item_id, @ukuraina.id), method: :delete, class:"orner-edit" %>
+  <% end %> 

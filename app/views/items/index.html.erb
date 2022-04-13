@@ -10,6 +10,14 @@
 <ul class="nav"></ul>
 </div>
 
+<h3 class="project-list">ウクライナ緊急支援対象商品</h3>
+ <%= link_to(project_list_path, class: 'product-list-btn') do  %>
+<p class="product-list">対象商品一覧へ ＞</p>
+<% end %>
+
+<div class="main">
+ <%= render partial: "@ukuraina", collection: @ukuraina %>
+</div>
 
  <%# <h1 class="service-title1">しあえるプロジェクト</h1>
   <h1 class='service-title2'>地球がすべての生命にとって、良い世界になることを目指して</h1>
