@@ -46,8 +46,8 @@ class OrdersController < ApplicationController
       #                                  quantity: cart_return.quantity)
       #   order_return.save
       # end
-      # @email = "info@shiaeru.net"
-      # BuyMailer.order_sonemails(@email, @cart, @order, @order_residence, current_user.nickname).deliver_now
+      @email = "info@shiaeru.net"
+      BuyMailer.order_sonemails(@email, @cart, @order, @order_residence, current_user.nickname).deliver_now
       @cart.destroy
     else
       render :index

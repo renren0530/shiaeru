@@ -45,8 +45,8 @@ class BuysController < ApplicationController
       @order_residence.save
       @order = Order.order(updated_at: :desc).limit(1)
       settlement
-      # @email = "info@shiaeru.net"
-      # BuyMailer.buy_sonemails(@email, @buy, @return, @order_residence, current_user.nickname).deliver_now
+      @email = "info@shiaeru.net"
+      BuyMailer.buy_sonemails(@email, @buy, @return, @order_residence, current_user.nickname).deliver_now
      else
       render :show
      end
