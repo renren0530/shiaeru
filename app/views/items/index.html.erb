@@ -10,8 +10,27 @@
 <ul class="nav"></ul>
 </div>
 
-<h3 class="project-list">ウクライナ緊急支援対象商品</h3>
+<h3 class="project-list">ウクライナ緊急支援プロジェクト</h3>
 
+<div class="SDGs">
+<span><%= image_tag "items/ADRA.png", width:"300", height:"300", class:"sdgs" %></span>
+</div>
+
+<div class="shiaeru-content"> 
+
+   <div class="activities">
+    <p class="shiaeru-detail">ウクライナのためになにかしたい・・・</p>
+    <p class="sub-title">しあえるはウクライナのために緊急支援プロジェクトを立ち上げました。</p>
+    <p class="sub-title">対象商品を購入していただいた場合、売上金を全額ウクライナに寄付させていただきます。</p>
+    <p class="sub-title">ご支援よろしくお願いいたします。</p>
+    <%= link_to("http://192.168.3.4:3000/items/21", class: 'shiaeru-btn') do  %>
+    <p class="shiaeru-text">詳しくはこちら</p>
+    <% end %>
+  </div>
+  
+</div>
+
+<h3 class="shiaeru-project">ウクライナ緊急支援対象商品</h3>
 
 <div class="main">
  <%= render partial: "@ukuraina", collection: @ukuraina %>
