@@ -7,7 +7,7 @@ class ItemsController < ApplicationController
     @items = Item.all.order('created_at ASC').limit(12)
     @brands = Brand.all.order('created_at ASC').limit(12)
     @returns = Return.all.order('created_at ASC').limit(12)
-    @ukuraina = Return.where(item_id: "21")
+    @ukuraina = Return.where(item_id: "85")
   end
 
   def new
