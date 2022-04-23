@@ -9,9 +9,9 @@ Rails.application.routes.draw do
   resources :items do
     resources :returns do
          resources :buys 
-         post 'buys/:id' => 'buys#buy'
-     
-  end
+         post 'buys/:id' => 'buys#buy' 
+ 
+     end
 end
 
   resources :orders
@@ -40,15 +40,10 @@ end
   post '/add_item' => 'carts#add_item'
   post '/update_item' => 'carts#update_item'
   delete '/delete_item' => 'carts#delete_item'
-  get '/buys_complete' => 'buys#complete'
   get '/item_list' => 'items#item_list'
   get '/brand_list' => 'brands#brand_list'
   get '/project_list' => 'items#project_list'
-
-
-
-
-
+  get '/buys_complete' => 'buys#complete'
 
 end
 

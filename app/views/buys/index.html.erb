@@ -1,0 +1,85 @@
+<%= render "shared/header"%>
+
+<div class='transaction-contents'>
+  <div class='transaction-main'>
+    <h1 class='transaction-title-text'>
+      購入内容の確認
+    </h1>
+     <% price = @return.return_price.to_i %>
+          <% quantity = @buy[0][:quantity].to_i %>
+          <% sum = price*quantity %>
+    <%# 購入内容の表示 %>
+      <div class="order-product">
+      <%= image_tag @return.images[0], class: 'buy-item-img' %>
+      <div class='buy-item-right-content'>
+        <h2 class='buy-item-text'><%= @return.return_name %></h2>
+          <div class="quantity-price">
+        <p class='item-price-text'><%= number_to_currency(@return.return_price.to_s, locale:"jp") %></p>
+        <p class='item-price-quantity'>×<%= @buy[0][:quantity] %>個</p>
+        </div>
+        <p class='item-price-text'>小計：<%= number_to_currency(sum.to_s, locale:"jp") %></p>
+
+      </div> 
+      </div>
+
+    <%# /購入内容の表示 %>
+  
+
+
+    <%# 支払額の表示 %>
+    <div class='item-payment'>
+      <h1 class='item-payment-title'>
+        支払金額
+      </h1>
+      <p class='item-payment-price'>
+      <%= number_to_currency(sum.to_s, locale:"jp") %>
+      </p>
+    </div>
+    <%# /支払額の表示 %>
+
+      <%# 購入方法の表示 %>
+    <div class='item-payment'>
+      <h1 class='item-payment-title'>
+        購入方法
+      </h1>
+
+      <p class='item-payment-price'>
+      　代引き
+      </p>
+    </div>
+      <%# 購入方法の表示 %>
+
+    <%# 住所の表示 %>
+
+  
+   
+
+    <div class='buy-methods'>
+      <h1 class='info-input-haedline'> 
+      <p class='confirmation-address'>お届け先住所</p>
+      </h1>
+
+      <h1 class='info-input-haedlines'> 
+        <p>郵便番号： <%= @residence[0][:postal_code] %></p>
+        <p>市町村： <%= @residence[0][:city] %></p>
+        <p>番地： <%= @residence[0][:addresses] %></p>
+        <p>建物名： <%= @residence[0][:building] %></p>
+        <p>電話番号： <%= @residence[0][:phone_number] %></p>
+      </h1>
+    </div>
+    <%# 住所の表示 %>
+
+<%= form_with model: @order_residence, url:item_return_buys_path, id: 'charge-form', class: 'transaction-form-wrap',local: true do |f| %>
+
+
+  <div class='buy-btns'>
+      <%= f.submit "購入を確定する" ,class:"buy-red-btn", id:"button", type:"submit", name:"button3" %>
+   </div>
+  </div>
+<% end %>
+
+
+  </div>
+<%= render "shared/footer"%>
+
+

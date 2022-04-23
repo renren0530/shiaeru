@@ -2,12 +2,18 @@ class OrdersController < ApplicationController
   before_action :authenticate_user!, only: [:index, :create]
 
   def index
-    # @item = Item.find(params[:item_id])
-    # @return = Return.find(params[:return_id])
     @order_residence = OrderResidence.new
     @cart = current_user.cart
     if @cart.blank?
     redirect_to root_path
+    end
+  end
+
+  def show
+    @cart = current_user.cart
+    @residence = Residence.last(1)
+    if @cart.blank?
+       redirect_to root_path  
     end
   end
 
@@ -18,17 +24,7 @@ class OrdersController < ApplicationController
     if @order_residence.valid?
       @order_residence.save
       @order = Order.order(updated_at: :desc).limit(1)
-      # @cart.cart_returns.each do |cart_return|
-      #   order_return = OrderReturn.new(order_id: @order.ids[0], return_id: cart_return.return_id,
-      #                                  quantity: cart_return.quantity)
-      #   order_return.save
-      # end
-      @email = current_user.email
-      @soneemail = "info@shiaeru.net"
-      BuyMailer.cash_on_order_mail(@email, @cart, @order, @order_residence, current_user.nickname).deliver_now
-      BuyMailer.order_mail(@soneemail, @cart, @order, @order_residence, current_user.nickname).deliver_now
-      @cart.destroy
-      redirect_to buys_complete_path
+      redirect_to order_path(@cart.id)
     else
       render :index
     end
@@ -54,10 +50,18 @@ class OrdersController < ApplicationController
     end
   end
 
-  end
+  if params[:button3]
+    @cart = current_user.cart
+    @residences = Residence.last(1)
+    @residence = @residences[0]
+    @email = current_user.email
+    @soneemail = "info@shiaeru.net"
+    BuyMailer.cash_on_order_mail(@email, @cart, @order, @residence, current_user.nickname).deliver_now
+    BuyMailer.order_mail(@soneemail, @cart, @order, @residence, current_user.nickname).deliver_now
+    @cart.destroy
+    redirect_to buys_complete_path
+   end
 
-
-  def show
   end
 
   def update

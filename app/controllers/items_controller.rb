@@ -7,7 +7,8 @@ class ItemsController < ApplicationController
     @items = Item.all.order('created_at ASC').limit(12)
     @brands = Brand.all.order('created_at ASC').limit(12)
     @returns = Return.all.order('created_at ASC').limit(12)
-    @ukuraina = Return.where(item_id: "85")
+    @ukurainapage = Item.where(item_name: "ウクライナ")
+    @ukuraina = Return.where(item_id: @ukurainapage[0][:id])
   end
 
   def new

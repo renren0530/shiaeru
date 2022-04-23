@@ -19,23 +19,30 @@ class BuysController < ApplicationController
     end
   end
 
+  def index
+    @item = Item.find(params[:item_id])
+    @return = Return.find(params[:return_id])
+    @buy = Buy.last(1)
+    @residence = Residence.last(1)
+  end
+
   def create
     if params[:button1]
+      @item = Item.find(params[:item_id])
       @buy = Buy.find(params[:buy_id])
       @return = Return.find(params[:return_id])
       @order_residence = OrderResidence.new(order_params)
       if @order_residence.valid?
+        @buy.save
         @order_residence.save
         @order = Order.order(updated_at: :desc).limit(1)
         @email = current_user.email
         @soneemail = "info@shiaeru.net"
-        BuyMailer.cash_on_buy_mail(@email, @buy, @return, @order_residence, current_user.nickname).deliver_now
-        BuyMailer.buy_mail(@soneemail, @buy, @return, @order_residence, current_user.nickname).deliver_now
-        redirect_to buys_complete_path
+        redirect_to item_return_buys_path(@item.id, @return.id)
       else
         render :show
-       end
-    end
+     end
+  end
 
     if params[:button2]
     @buy = Buy.find(params[:buy_id])
@@ -51,6 +58,21 @@ class BuysController < ApplicationController
       render :show
      end
     end
+
+    if params[:button3]
+      @item = Item.find(params[:item_id])
+      @buys = Buy.last(1)
+      @buy = @buys[0]
+      @return = Return.find(params[:return_id])
+      @residences = Residence.last(1)
+      @residence = @residences[0]
+      @email = current_user.email
+      @soneemail = "info@shiaeru.net"
+      BuyMailer.cash_on_buy_mail(@email, @buy, @return, @residence, current_user.nickname).deliver_now
+      BuyMailer.buy_mail(@soneemail, @buy, @return, @residence, current_user.nickname).deliver_now
+        redirect_to buys_complete_path
+     end
+
   end
 
 
