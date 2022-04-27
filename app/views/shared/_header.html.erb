@@ -11,7 +11,7 @@
            <% if user_signed_in? %> 
            <li class="nav__item"><%= link_to "買い物かご", my_cart_path, class:"header_page" %>
           </li>
-           <li class="nav__item"><%= link_to "マイページ", mypage_user_path(current_user.id), class:"header_page" %></li>
+           <%# < class="nav__item"><%= link_to "マイページ", mypage_user_path(current_user.id), class:"header_page" %>
            <li class="nav__item"><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class:"header_page" %></li>
            <% else %>
            <li class="nav__item"><%= link_to '新規登録', new_user_registration_path, class:"header_page" %></li>
