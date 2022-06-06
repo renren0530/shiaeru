@@ -8,7 +8,7 @@
     <script type="text/javascript" src="//seal.globalsign.com/SiteSeal/gmo"></script>
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_pack_tag 'application', media: 'all' %>
-  <% if Rails.env.production? %>
+  <%= analytics_init if Rails.env.production? %>
   <%= render 'layouts/google_analytics' %>
   <% end %>
   </head>
