@@ -7,8 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=yes">
     <script type="text/javascript" src="//seal.globalsign.com/SiteSeal/gmo"></script>
     <%= stylesheet_link_tag 'application', media: 'all' %>
-  
     <%= javascript_pack_tag 'application', media: 'all' %>
+    <%= analytics_init if Rails.env.production? %>
   </head>
 
   <body>

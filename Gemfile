@@ -73,4 +73,5 @@ gem "aws-sdk-s3", require: false
 gem 'rails-i18n'
 gem 'jpmobile'
 gem 'sidekiq'
+gem 'google-analytics-rails'
 # gem 'rack-timeout'
