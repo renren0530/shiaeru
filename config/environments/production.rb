@@ -132,6 +132,6 @@ Rails.application.configure do
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
 
    # replace this with your tracker code
-   GA.tracker = "UA-153163174-3"
+   GA.tracker = "UA-230809536-1"
 
 end
