@@ -13,16 +13,10 @@
 ・https://shiaeru.herokuapp.com/
 
 # テスト用アカウント
-
-・管理ユーザー<br>
-　email : earth_r@i.softbank.jp<br>
-　password : Zoo1Zoo3<br>
- ID：admin　PASS：2222
  
-・一般ユーザー<br>
 　email : earth_rr@i.softbank.jp<br>
 　password : Zoo1Zoo3<br>
- ID：admin　PASS：2222
+
 
 # 利用方法
 ・購入機能<br>
